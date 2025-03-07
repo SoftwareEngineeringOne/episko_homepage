@@ -1,34 +1,42 @@
 [
   {
-    "id": "78139edf9b770f82bc8dfd3567a68508bd73dd560a54a600",
-    "title": "test",
-    "content": "test",
+    "id": "0312e667-9509-42d3-8502-b0ecf4d6c179",
+    "title": "Episko Kickoff",
+    "content": "Today we presented our idea of \"Episko\" to our Stakeholders. We shared our respective interests and eventually got the GO for the project. We will now enter the planning phase and see how we can realize our imagination of the Tool. Stay tuned. We will post all relevant milestones here!",
+    "author": "author",
+    "createdAt": "2024-10-01T14:12:48.025Z",
+    "status": "published"
+  },
+  {
+    "id": "4ae68704-1d8c-4eae-83ba-21d434cea4a8",
+    "title": "Development plan finished",
+    "content": "Our plan on how we approach this project is finished, and we are already thinking about all the features we want to implement. Is there anything you definitely want to see in the App? Hit us up via devs@episko.com, tell us about your idea, and we will try to realize it.",
+    "author": "author",
+    "createdAt": "2024-11-13T17:37:16.180Z",
+    "status": "published"
+  },
+  {
+    "id": "a78bb406-9ec7-451a-8939-83c8dc605ea4",
+    "title": "Planning done - Now start doing",
+    "content": "Today we finished the last part of the planning phase. This means everything is set up, and we can finally start implementing. For those of you who are interested in this part of the process, feel free to check out our GitHub page (github.com/SoftwareEngineeringOne/episko).",
+    "author": "author",
+    "createdAt": "2025-01-10T11:02:47.153Z",
+    "status": "published"
+  },
+  {
+    "id": "ecb32776-822d-477b-9a37-050e70e6e5f0",
+    "title": "Progress",
+    "content": "We are working hard on the last features. If everything goes as planned, we're looking forward to releasing the beta version by the end of the month. See you there. :D",
+    "author": "author",
+    "createdAt": "2025-03-03T14:35:21.431Z",
+    "status": "published"
+  },
+  {
+    "id": "06fdbf40457ecd292293361055ed7cb69aa50e61dafe7d03",
+    "title": "Test",
+    "content": "test1234",
     "author": "admin",
-    "createdAt": "2025-01-18T12:04:31.837Z",
-    "status": "published"
-  },
-  {
-    "id": "673420d6dd23c02bccb5d849b153b6ce2c2da4fdccc81694",
-    "title": "test lorem long",
-    "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-    "author": "Simon",
-    "createdAt": "2025-01-18T12:12:56.571Z",
-    "status": "published"
-  },
-  {
-    "id": "8006afe7eb8b03712ecaeb09c56635b646267f01bc2dbb7a",
-    "title": "Updated",
-    "content": "r htgthtzjnh",
-    "author": "user",
-    "createdAt": "2025-01-21T10:30:37.290Z",
-    "status": "published"
-  },
-  {
-    "id": "608e8fbde93e0ee39c881af0238b85e0d83b7ab9371de343",
-    "title": "ByAuthor1235",
-    "content": "dsgretjt thtrhth",
-    "author": "test",
-    "createdAt": "2025-02-05T11:53:59.053Z",
+    "createdAt": "2025-03-07T14:16:07.170Z",
     "status": "published"
   }
 ]

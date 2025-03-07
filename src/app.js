@@ -22,6 +22,8 @@ app.set("view engine", "pug");
 
 app.use(loggerMiddleware);
 
+app.use(express.static('public'))
+
 app.use(cookieMiddleware);
 app.use(
   session({

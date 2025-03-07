@@ -30,11 +30,31 @@ class User {
    * @param {string} username
    * @param {Role} role
    */
-  constructor(username, role = Roles.USER) {
+  constructor(firstName, lastName, username, role = Roles.USER) {
+    /** @type {string} */
+    this.firstName = firstName;
+
+    /** @type {string} */
+    this.lastName = lastName;
+
     /** @type {string} */
     this.username = username;
+
     /** @type {Role} */
     this.role = role;
+  }
+
+  static fromObject(obj) {
+    if (
+      !obj ||
+      !obj.firstName ||
+      !obj.lastName ||
+      !obj.username ||
+      !obj.role
+    ) {
+      return null;
+    }
+    return new User(obj.firstName, obj.lastName, obj.username, obj.role);;
   }
 
   /**
@@ -62,12 +82,39 @@ class User {
     }
   }
 
+  async updateRole(role) {
+    this.role = role;
+    try {
+      const data = await fs.readFile(usersFile, "utf8");
+      const users = JSON.parse(data);
+      const user = users.find((user) => user.username === this.username);
+
+      user.role = role;
+      await fs.writeFile(usersFile, JSON.stringify(users, null, 2));
+    } catch (err) {
+      console.error("Error updating role:", err);
+      throw err;
+    }
+  }
+
   static async getAll() {
     try {
       const data = await fs.readFile(usersFile, "utf8");
-      return JSON.parse(data).map((user) => new User(user.username, user.role));
+      return JSON.parse(data).map((user) => User.fromObject(user));
     } catch (err) {
       console.error("Error getting users:", err);
+      throw err;
+    }
+  }
+
+  static async getWithUsername(username) {
+    try {
+      const data = await fs.readFile(usersFile, "utf8");
+      const users = JSON.parse(data);
+      const user = users.find((user) => user.username == username);
+      return User.fromObject(user);
+    } catch (err) {
+      console.error(`Error getting user with username ${username}: `, err);
       throw err;
     }
   }
@@ -78,7 +125,9 @@ class User {
    * @returns {Promise<boolean>}
    */
   async registerUser(password) {
-    if (!this.username || !password) return false;
+    if (!this.firstName || !this.lastName || !this.username || !password) {
+      return false;
+    }
 
     try {
       const data = await fs.readFile(usersFile, "utf8");
@@ -91,6 +140,8 @@ class User {
 
       // Add new user
       users.push({
+        firstName: this.firstName,
+        lastName: this.lastName,
         username: this.username,
         password,
         role: this.role,
@@ -101,6 +152,19 @@ class User {
     } catch (err) {
       console.error("Error creating user:", err);
       return false;
+    }
+  }
+
+  async delete() {
+    try {
+      const data = await fs.readFile(usersFile, "utf8");
+      const users = JSON.parse(data);
+      const index = users.findIndex((user) => user.username === this.username);
+      users.splice(index, 1);
+      await fs.writeFile(usersFile, JSON.stringify(users, null, 2));
+    } catch (err) {
+      console.error("Error deleting user:", err);
+      throw err;
     }
   }
 }

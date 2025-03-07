@@ -19,45 +19,39 @@ If you still don't have enough, let Episko generate useful statistics, including
 
 ! Posts Page:
 
-Post 1:
 ___________
-01.10.2024
-
-Episko Kickoff
-
-Today we presented our idea of "Episko" to our Stakeholders. We shared our respective interests and eventually got the GO for the project.
-We will now enter the planning phase and see how we can realize our imagination of the Tool.
-Stay tuned. We will post all relevant milestones here!
-___________
-
-
-Post 2:
-___________
-13.11.2024
-
-Development plan finished
-
-Our plan on how we approach this project is finished, and we are already thinking about all the features we want to implement. Is there anything you definitely want to see in the App? Hit us up via devs@episko.com, tell us about your idea, and we will try to realize it.
-___________
-
-
-Post 3:
-___________
-10.01.2025
-
-Planning done - Now start doing
-
-Today we finished the last part of the planning phase. This means everything is set up, and we can finally start implementing. For those of you who are interested in this part of the process, feel free to check out our GitHub page (github.com/SoftwareEngineeringOne/episko).
-___________
-
-Post 4:
-___________
-03.03.2025
-
-Progress
-
-We are working hard on the last features. If everything goes as planned, we're looking forward to releasing the beta version by the end of the month. See you there. :D
-___________
+{
+    "id": "",
+    "title": "Episko Kickoff",
+    "content" : "Today we presented our idea of "Episko" to our Stakeholders. We shared our respective interests and eventually got the GO for the project. We will now enter the planning phase and see how we can realize our imagination of the Tool. Stay tuned. We will post all relevant milestones here!",
+    "author": "",
+    "createdAt": "01.10.2024",
+    "status": "published",
+},
+{
+    "id": "",
+    "title": "Development plan finished",
+    "content" : "Our plan on how we approach this project is finished, and we are already thinking about all the features we want to implement. Is there anything you definitely want to see in the App? Hit us up via devs@episko.com, tell us about your idea, and we will try to realize it.",
+    "author": "",
+    "createdAt": "13.11.2024",
+    "status": "published",
+},
+{
+    "id": "",
+    "title": "Planning done - Now start doing",
+    "content" : "Today we finished the last part of the planning phase. This means everything is set up, and we can finally start implementing. For those of you who are interested in this part of the process, feel free to check out our GitHub page (github.com/SoftwareEngineeringOne/episko).",
+    "author": "",
+    "createdAt": "10.01.2025",
+    "status": "published",
+},
+{
+    "id": "",
+    "title": "Progress",
+    "content" : "We are working hard on the last features. If everything goes as planned, we're looking forward to releasing the beta version by the end of the month. See you there. :D",
+    "author": "",
+    "createdAt": "03.03.2025",
+    "status": "published",
+}
 
 
 ! Contributors Page:

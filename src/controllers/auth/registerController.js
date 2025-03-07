@@ -8,14 +8,25 @@ export const registerController = {
       next(err);
     }
   },
-  handlePostRequest: async (req, res) => {
-    const { username, password } = req.body;
 
-    const user = new User(username);
+  handlePostRequest: async (req, res) => {
+    const { firstName, lastName, username, password, role } = req.body;
+
+    let user;
+    if (role) {
+      user = new User(firstName, lastName, username, role);
+    } else {
+      user = new User(firstName, lastName, username);
+    }
+
     const success = await user.registerUser(password);
 
     if (success) {
-      req.session.user = user;
+      // if "role" was passed in the body, user was created from admin
+      // panel, so we shouldn't log him in
+      if (!role) {
+        req.session.user = user;
+      }
       res.status(200).json(user);
     } else {
       res.writeHead(400, { "Content-Type": "text/plain" });

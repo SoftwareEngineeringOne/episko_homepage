@@ -6,6 +6,10 @@ services:
     restart: always
     environment:
       NODE_ENV: "production"
+    develop:
+      watch:
+        - action: rebuild
+          path: ./src/**/*
 
   nginx:
     image: nginx:latest
@@ -20,3 +24,8 @@ services:
       - ./certs:/etc/ssl/nginx
     depends_on:
       - nodejs
+    develop:
+      watch:
+        - action: sync
+          path: ./public/**/*
+          target: /var/www/episko

@@ -152,6 +152,7 @@ class Post {
    * @returns {Promise<void>}
    */
   async changeStatus(status) {
+    this.status = status;
     try {
       const data = await fs.readFile(postsFile, "utf8");
       const posts = JSON.parse(data);

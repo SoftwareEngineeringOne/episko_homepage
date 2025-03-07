@@ -11,6 +11,11 @@ const router = express.Router();
 router.get("/", (req, res) => {
   res.redirect("/admin/dashboard");
 });
+
 router.get("/dashboard", adminController.displayAdminDashboard);
+
+router.post("/users/:username/role", adminController.updateUserRole);
+
+router.delete("/users/:username", adminController.deleteUser);
 
 export default router;
