@@ -1,0 +1,133 @@
+@import "./base.css";
+
+/* --- Layout --- */
+.all {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+/* --- Header --- */
+nav {
+  width: 100vw;
+}
+
+.logo span {
+  font-style: italic;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: white;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  a {
+    color: var(--color-primary);
+  }
+
+  .call-to-action {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+}
+
+/* --- Landing --- */
+section.hero {
+  display: flex;
+  width: 100vw;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/img/placeholder.jpg");
+  background-size: cover;
+
+  .flex-grid {
+    color: var(--color-on-primary);
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      font-size: 4em;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin: 0;
+      font-style: italic;
+    }
+
+    .cta-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    a {
+      margin: 10px;
+    }
+  }
+}
+
+section.highlights {
+  display: flex;
+  width: 100vw;
+  margin: 25px 25px;
+  align-items: flex-start;
+  flex-direction: column;
+
+  .highlights {
+    gap: 25px;
+  }
+
+  .card h3 {
+    font-size: 1.5em;
+  }
+}
+
+.post-container {
+  padding: 25px 25px;
+}
+
+.posts-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 25px;
+
+  .card {
+    width: 25rem;
+    overflow: hidden;
+    align-items: flex-start;
+
+    .post-meta,
+    .post-meta a {
+      font-style: italic;
+      color: var(--color-text-dim);
+    }
+  }
+}
+
+.post-content-preview {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,22 @@
+name: webengineering-project
+services:
+  nodejs:
+    build: .
+    container_name: nodejs
+    restart: always
+    environment:
+      NODE_ENV: "production"
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    restart: always
+    ports:
+      - "443:443"
+      - "80:80"
+    volumes:
+      - ./nginx/:/etc/nginx/
+      - ./public:/var/www/episko:ro
+      - ./certs:/etc/ssl/nginx
+    depends_on:
+      - nodejs

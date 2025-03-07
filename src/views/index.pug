@@ -1,0 +1,31 @@
+extends layout
+
+block scripts
+    script(src="/js/main.js", type="module")
+
+block header
+
+block content
+    section.hero
+        .flex-grid
+            h1.text-center Episko
+            p.text-center All of your projects in one place
+            .cta-container
+                a.button(href="/auth/register") Get Started
+                a.button.outline(
+                    href="https://github.com/SoftwareEngineeringOne/episkos",
+                    target="_blank"
+                ) Documentation
+
+    section.highlights
+        h2 Highlights
+        .flex-grid.highlights
+            .card
+                h3 🚀 Fast Performance
+                p Built with modern optimization techniques
+            .card
+                h3 🔒 Secure
+                p Enterprise-grade security features
+            .card
+                h3 📱 Responsive
+                p Flawless experience on all devices

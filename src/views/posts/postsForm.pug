@@ -1,0 +1,32 @@
+extends ../layout
+
+block scripts
+  script(src="/js/postsForm.js", type="module")
+
+block content
+  main.container
+    .card.post-form
+      if !existing_post
+        h1 Create New Post
+      else
+        h1 Edit Post
+
+      form#post-form(
+        method="POST",
+        action=existing_post ? `/posts/${existing_post.id}` : "/posts"
+      )
+        .form-group
+          label(for="title") Title
+          input#title.form-input(
+            name="title",
+            type="text",
+            required,
+            value=existing_post ? existing_post.title : ""
+          )
+        .form-group
+          label(for="content") Content
+          textarea#content.form-input(name="content", rows="8", required)= existing_post ? existing_post.content : ""
+        .post-actions
+          button.button.w-full(type="submit")= existing_post ? "Update Post" : "Publish Post"
+          if existing_post
+            a.button.outline.w-full(href=`/posts/p/${existing_post.id}`) Cancel

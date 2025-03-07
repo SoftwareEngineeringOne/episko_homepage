@@ -1,0 +1,10 @@
+article.card.post-card
+    h2
+        a(href=`/posts/p/${post.id}`, style="color: inherit")= post.title
+    .post-meta
+        span By&nbsp;
+        a(href=`/profile/${post.author}`) #{ post.author }
+        span &nbsp;
+        span= post.createdAt.toLocaleDateString()
+    p.post-content-preview= post.content
+    a.button(href=`/posts/${post.id}/read`) Read More

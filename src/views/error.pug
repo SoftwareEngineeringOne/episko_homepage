@@ -1,0 +1,12 @@
+extends layout
+
+block title
+  title= title
+
+block content
+  h2= error.status
+  h1= message
+  if error && error.stack
+    pre #{ error.stack }
+  else
+    p An error occurred.

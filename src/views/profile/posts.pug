@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+  main.container
+    .post-header
+      h1 Latest Posts from #{ user }
+
+    .posts-grid
+      each post in posts
+        include ../components/postPreview.pug
