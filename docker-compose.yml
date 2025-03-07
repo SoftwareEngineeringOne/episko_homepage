@@ -12,8 +12,8 @@ services:
     container_name: nginx
     restart: always
     ports:
-      - "443:443"
-      - "80:80"
+      - "4430:443"
+      - "8080:80"
     volumes:
       - ./nginx/:/etc/nginx/
       - ./public:/var/www/episko:ro

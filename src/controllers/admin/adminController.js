@@ -7,4 +7,9 @@ export const adminController = {
     const users = await User.getAll();
     res.render("admin/dashboard", { posts, users });
   },
+
+  updateUserRole: async (req, res) => {
+
+    res.end();
+  }
 };

@@ -1,0 +1,80 @@
+! Landing Page:
+
+Fast performance:
+Episko uses modern software solutions that guarantee the user to have fast and reliable access to his data.
+
+Simple concept:
+The simple - Metadata-based - concept makes Episko a very lightweight tool, working with human-readable Data.
+
+Intuitive Design:
+The modern and intuitive Design ensures Episko to be simple to understand and easy to use.
+
+
+About:
+Episko is a simple tool that, helps developers to have their software projects together all at one point. No matter which version control or IDE you're using, Episko will have all relevant information about your project ready for you. No more searching for forgotten old projects - Episko will know where you saved them. Just search for the name, the programming language or any other detail of your project, and you'll get a list of all matching ones within the blink of an eye. For even better sorting, you can assign them to self-determined categories.
+Working with human-readable files to store all details, Episko lets you create and manage your projects via the desktop app, the Command-Line  Interface, or by directly editing the Metadata file in your project directory.
+Moving to another device? No problem! Just specify where your projects are filed, and Episko will automatically find and add them to your project overview.
+If you still don't have enough, let Episko generate useful statistics, including all your projects, and get the ultimate overview of everything you're doing.
+
+
+! Posts Page:
+
+Post 1:
+___________
+01.10.2024
+
+Episko Kickoff
+
+Today we presented our idea of "Episko" to our Stakeholders. We shared our respective interests and eventually got the GO for the project.
+We will now enter the planning phase and see how we can realize our imagination of the Tool.
+Stay tuned. We will post all relevant milestones here!
+___________
+
+
+Post 2:
+___________
+13.11.2024
+
+Development plan finished
+
+Our plan on how we approach this project is finished, and we are already thinking about all the features we want to implement. Is there anything you definitely want to see in the App? Hit us up via devs@episko.com, tell us about your idea, and we will try to realize it.
+___________
+
+
+Post 3:
+___________
+10.01.2025
+
+Planning done - Now start doing
+
+Today we finished the last part of the planning phase. This means everything is set up, and we can finally start implementing. For those of you who are interested in this part of the process, feel free to check out our GitHub page (github.com/SoftwareEngineeringOne/episko).
+___________
+
+Post 4:
+___________
+03.03.2025
+
+Progress
+
+We are working hard on the last features. If everything goes as planned, we're looking forward to releasing the beta version by the end of the month. See you there. :D
+___________
+
+
+! Contributors Page:
+
+
+Maximilian Rodler
+Projektmanager
+[@MaxRodler](github.com/MaxRodler)
+
+Paul Stöckle
+Head of Development
+[@DosKobold](github.com/DosKobold)
+
+Simon Blum
+Head of Quality & Operations
+[@DefinitelyNotSimon13](github.com/DefinitelyNotSimon13)
+
+Ben Oeckl
+Head of Testing & Integrations
+[@benoeckl](github.com/benoeckl)

@@ -1,0 +1,39 @@
+name: Compile Static Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/views/static/*.pug'
+  workflow_dispatch:
+
+jobs:
+  compile:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'  # or whichever version you prefer
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Compile static files
+        run: node compile_static.js
+
+      - name: Commit and push changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: 'public'
+          message: '[Actions] Automated compilation: Update static HTML pages'
+          author_name: github-actions
+          author_email: github-actions@github.com

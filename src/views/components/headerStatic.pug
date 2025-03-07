@@ -1,0 +1,17 @@
+head
+    script(src="/js/auth/logout.js", type="module")
+
+nav
+    .navbar
+        .logo(onclick="location.href='/'")
+            span Episko
+        .nav-links
+            a(href="/") Home
+            a(href="/posts") Posts
+            // if session.user === undefined
+            //    a.button.call-to-action(
+            //        href=`/auth/register?next=${encodeURIComponent(originalUrl)}`
+            //    ) Get Started
+            // else
+            //    a(href=`/profile/${session.user.username}`)= session.user.username
+            //    button.button.call-to-action(onclick="logout()type=\"submit\"") Logout

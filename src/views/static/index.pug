@@ -1,9 +1,10 @@
-extends layout
+extends ../layout
 
 block scripts
     script(src="/js/main.js", type="module")
 
 block header
+    include ../components/headerStatic
 
 block content
     section.hero
