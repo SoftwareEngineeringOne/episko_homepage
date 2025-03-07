@@ -22,7 +22,7 @@ for (const form of roleChangeForms) {
     } catch (err) {
       console.log(err);
     }
-  })
+  });
 }
 
 addSubmitListener("new-user-form", async (event) => {
@@ -36,10 +36,9 @@ addSubmitListener("new-user-form", async (event) => {
       console.error("Failed to create user");
     }
   } catch (err) {
-    console.error(err)
+    console.error(err);
   }
-
-})
+});
 
 function deleteUser(username) {
   fetch(`/admin/users/${username}`, {
@@ -52,7 +51,6 @@ function deleteUser(username) {
     }
   });
 }
-
 
 /* ---- Posts ---- */
 /**

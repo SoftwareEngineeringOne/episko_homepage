@@ -6,9 +6,9 @@ const templates = [
   { src: "src/views/static/about.pug", dest: "public/about.html" },
   { src: "src/views/static/terms.pug", dest: "public/terms.html" },
   { src: "src/views/static/privacy.pug", dest: "public/privacy.html" },
-]
+];
 
-templates.forEach(template => {
+templates.forEach((template) => {
   const compiled = pug.compileFile(template.src);
 
   fs.writeFile(template.dest, compiled(), (err) => {
@@ -19,5 +19,4 @@ templates.forEach(template => {
 
     console.log(`Succesfully compiled ${template.src} to ${template.dest}`);
   });
-})
-
+});

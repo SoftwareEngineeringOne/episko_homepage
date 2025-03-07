@@ -45,16 +45,10 @@ class User {
   }
 
   static fromObject(obj) {
-    if (
-      !obj ||
-      !obj.firstName ||
-      !obj.lastName ||
-      !obj.username ||
-      !obj.role
-    ) {
+    if (!obj || !obj.firstName || !obj.lastName || !obj.username || !obj.role) {
       return null;
     }
-    return new User(obj.firstName, obj.lastName, obj.username, obj.role);;
+    return new User(obj.firstName, obj.lastName, obj.username, obj.role);
   }
 
   /**

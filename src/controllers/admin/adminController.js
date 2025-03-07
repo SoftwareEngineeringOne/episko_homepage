@@ -57,6 +57,6 @@ export const adminController = {
       res.end("Internal Server Error");
     }
 
-    res.end()
-  }
+    res.end();
+  },
 };

@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'src/views/static/*.pug'
+      - "src/views/static/*.pug"
   workflow_dispatch:
 
 jobs:
@@ -22,7 +22,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22'  # or whichever version you prefer
+          node-version: "22" # or whichever version you prefer
 
       - name: Install dependencies
         run: npm ci
@@ -33,7 +33,7 @@ jobs:
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v9
         with:
-          add: 'public'
-          message: '[Actions] Automated compilation: Update static HTML pages'
+          add: "public"
+          message: "[Actions] Automated compilation: Update static HTML pages"
           author_name: github-actions
           author_email: github-actions@github.com
