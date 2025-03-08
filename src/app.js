@@ -5,7 +5,7 @@ import authRouter from "./routes/auth.js";
 import apiRouter from "./routes/api.js";
 import postsRouter from "./routes/posts.js";
 import adminRouter from "./routes/admin.js";
-import profileRouter from "./routes/profile.js";
+import userRouter from "./routes/user.js";
 import { errorHandler, notFoundHandler } from "./middleware/errors.js";
 import { loggerMiddleware } from "./middleware/logger.js";
 import { pugMiddleware } from "./middleware/pug.js";
@@ -41,7 +41,7 @@ app.use("/auth", authRouter);
 app.use("/api", apiRouter);
 app.use("/posts", postsRouter);
 app.use("/admin", adminRouter);
-app.use("/profile", profileRouter);
+app.use("/user", userRouter);
 
 app.use(notFoundHandler);
 app.use(errorHandler);

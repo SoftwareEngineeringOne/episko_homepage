@@ -1,0 +1,144 @@
+/* --- Header --- */
+nav {
+  width: 100vw;
+}
+
+.logo img {
+  max-height: 3rem;
+  padding: 0;
+  margin: 0;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: white;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  a {
+    color: var(--color-primary);
+  }
+
+  .call-to-action {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+}
+
+@media(max-width: 600px) {
+  .logo-full {
+    display: none;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+
+  #menu-toggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+  }
+
+  .drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #444;
+    overflow-x: hidden;
+    transition: width 0.3s ease;
+    padding-top: 60px;
+    z-index: 1000;
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+
+      a {
+        display: block;
+        padding: 12px 32px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: background 0.3s;
+      }
+
+      a:hover {
+        background: #555;
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 2rem;
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .cta-drawer {
+      display: flex;
+      height: 10vh;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+    display: none;
+  }
+
+  body.drawer-open #overlay {
+    display: block;
+  }
+}
+
+@media(min-width: 601px) {
+  .logo-small {
+    display: none;
+  }
+
+  .drawer {
+    display: none;
+  }
+
+  #overlay {
+    display: none;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+}

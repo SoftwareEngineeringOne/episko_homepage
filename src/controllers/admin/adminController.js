@@ -19,8 +19,8 @@ export const adminController = {
       const { role } = req.body;
       console.log("Role: ", role);
 
-      const user = await User.getWithUsername(req.params.username);
-      user.updateRole(role);
+      const user = await User.withUsername(req.params.username);
+      await user.updateRole(role);
 
       res.writeHead(200, { "Content-Type": "text/plain" });
       res.end();
@@ -40,7 +40,7 @@ export const adminController = {
       return;
     }
 
-    const user = await User.getWithUsername(req.params.username);
+    const user = await User.withUsername(req.params.username);
     if (!user) {
       res.writeHead(404, { "Content-Type": "text/plain" });
       res.end("User not found");

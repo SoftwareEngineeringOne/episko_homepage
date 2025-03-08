@@ -1,17 +1,47 @@
+- var session = typeof session !== 'undefined' ? session : {};
+- var originalUrl = typeof originalUrl !== 'undefinied' ? originalUrl : '/';
+
 head
     script(src="/js/auth/logout.js", type="module")
+    script(src="/js/drawer.js", type="module")
 
 nav
     .navbar
-        .logo(onclick="location.href='/'")
+        .logo.logo-full(onclick="location.href='/'")
             img(src="/img/logo_full_transparent.png")
+        .logo.logo-small(onclick="location.href='/'")
+            img(src="/img/logo_small_transparent.png")
         .nav-links
             a(href="/") Home
+            a(href="/about") About
             a(href="/posts") Posts
             if session.user === undefined
                 a.button.call-to-action(
                     href=`/auth/register?next=${encodeURIComponent(originalUrl)}`
                 ) Get Started
             else
+                if session.user.role == 'admin'
+                    a(href="/admin") Admin
                 a(href=`/profile/${session.user.username}`)= session.user.username
-                button.button.call-to-action(onclick="logout()type=\"submit\"") Logout
+                button.button.call-to-action(onclick="logout()") Logout
+
+        button#menu-toggle(type="button") &#9776;
+
+        aside#drawer.drawer
+            a.close(href="javascript:void(0)") &times;
+            ul
+                li: a(href="/") Home
+                li: a(href="/about") About
+                li: a(href="/posts") Posts
+                if session.user === undefined
+                    .cta-drawer
+                        a.button.call-to-action(
+                            href=`/auth/register?next=${encodeURIComponent(originalUrl)}`
+                        ) Get Started
+                else 
+                    if session.user.role == 'admin'
+                        li: a(href="/admin") Admin
+                    li: a(href=`/profile/${session.user.username}`)= session.user.username
+                    li: a(onclick="logout()") Logout
+
+        div#overlay

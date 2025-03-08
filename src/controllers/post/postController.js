@@ -16,6 +16,7 @@ export const PostController = {
   displayPostWithId: async (req, res, next) => {
     try {
       const post = await Post.getWithId(req.params.id);
+      console.log("Post:", post);
       if (!post) {
         next({ status: 404, message: "Post not found" });
         return;

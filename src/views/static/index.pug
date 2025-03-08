@@ -4,12 +4,12 @@ block scripts
     script(src="/js/main.js", type="module")
 
 block header
-    include ../components/headerStatic
+    include ../components/header
 
 block content
     section.hero
         .flex-grid
-            h1.text-center Episko
+            h1.text-center episko
             p.text-center All of your projects in one place
             .cta-container
                 a.button(href="/auth/register") Get Started
@@ -21,12 +21,17 @@ block content
     section.highlights
         h2 Highlights
         .flex-grid.highlights
-            .card
+            .card.card-hover
                 h3 🚀 Fast Performance
-                p Built with modern optimization techniques
-            .card
-                h3 🔒 Secure
-                p Enterprise-grade security features
-            .card
-                h3 📱 Responsive
-                p Flawless experience on all devices
+                p We use modern software solutions that guarantee the user to have fast and reliable access to his data.
+            .card.card-hover
+                h3 🪶 Lightweight
+                p The simple, Metadata-based concept makes Episko a very lightweight tool, working with human-readable Data.
+            .card.card-hover
+                h3 📱 Intuitive
+                p The modern and intuitive Design ensures Episko to be simple to understand and easy to use.
+
+    button.button(onclick='showSnackbarError("An error has occured")') Trigger Snackbar
+
+    section.about
+        

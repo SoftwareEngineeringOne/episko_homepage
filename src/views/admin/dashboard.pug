@@ -30,7 +30,7 @@ block content
                                 option(value="admin", selected= user.role == 'admin') Admin
                             button(type="submit") Apply
                     td
-                        a(href=`/profile/${user.username}`) View
+                        a(href=`/user/${user.username}`) View
                         button(onclick=`deleteUser('${user.username}')`) Delete
 
             tr
