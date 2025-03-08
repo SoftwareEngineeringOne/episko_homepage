@@ -1,4 +1,4 @@
 node_modules
-.idea
-out
-key.pem
+.direnv
+.cache
+flake.lock

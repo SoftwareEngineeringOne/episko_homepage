@@ -1,6 +1,8 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
+import { findEntryInData, readAndParseData } from "../util/data.js";
+
 const usersFile = path.join(process.cwd(), "src", "data", "users.json");
 
 /**
@@ -51,36 +53,20 @@ class User {
     return new User(obj.firstName, obj.lastName, obj.username, obj.role);
   }
 
-  /**
-   * Logs in a user.
-   * @param username
-   * @param password
-   * @returns {Promise<User|null>}
-   */
   static async loginUser(username, password) {
     try {
-      const data = await fs.readFile(usersFile, "utf8");
-      const users = JSON.parse(data);
-
-      const user = users.find(
-        (u) => u.username === username && u.password === password,
-      );
-      console.log("User found:", user);
-      console.log("Role:", user.role);
-      console.log("Role type:", typeof user.role);
-
+      const user = findEntryInData(usersFile, (u) => u.username === username && u.password === password)
       return user || null;
     } catch (err) {
       console.error("Error validating user:", err);
-      return null;
+      throw err;
     }
   }
 
   async updateRole(role) {
     this.role = role;
     try {
-      const data = await fs.readFile(usersFile, "utf8");
-      const users = JSON.parse(data);
+      const users = readAndParseData(usersFile);
       const user = users.find((user) => user.username === this.username);
 
       user.role = role;
@@ -93,19 +79,16 @@ class User {
 
   static async getAll() {
     try {
-      const data = await fs.readFile(usersFile, "utf8");
-      return JSON.parse(data).map((user) => User.fromObject(user));
+      return readAndParseData(usersFile, (user) => User.fromObject(user));
     } catch (err) {
       console.error("Error getting users:", err);
       throw err;
     }
   }
 
-  static async getWithUsername(username) {
+  static async withUsername(username) {
     try {
-      const data = await fs.readFile(usersFile, "utf8");
-      const users = JSON.parse(data);
-      const user = users.find((user) => user.username == username);
+      const user = findEntryInData(usersFile, (user) => user.username == username);
       return User.fromObject(user);
     } catch (err) {
       console.error(`Error getting user with username ${username}: `, err);
@@ -124,8 +107,7 @@ class User {
     }
 
     try {
-      const data = await fs.readFile(usersFile, "utf8");
-      const users = JSON.parse(data);
+      const users = readAndParseData(usersFile);
 
       // Check if user already exists
       if (users.some((u) => u.username === this.username)) {
@@ -145,14 +127,13 @@ class User {
       return true;
     } catch (err) {
       console.error("Error creating user:", err);
-      return false;
+      throw err;
     }
   }
 
   async delete() {
     try {
-      const data = await fs.readFile(usersFile, "utf8");
-      const users = JSON.parse(data);
+      const users = readAndParseData(usersFile);
       const index = users.findIndex((user) => user.username === this.username);
       users.splice(index, 1);
       await fs.writeFile(usersFile, JSON.stringify(users, null, 2));
