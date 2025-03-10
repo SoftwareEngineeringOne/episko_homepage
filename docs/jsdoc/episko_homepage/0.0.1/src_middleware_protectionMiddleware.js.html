@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: src/middleware/protectionMiddleware.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: src/middleware/protectionMiddleware.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module middleware/protectionMiddleware
+ * @description Provides middleware functions to restrict route access based on user roles.
+ */
+
+/**
+ * Middleware object for protecting routes.
+ * @typedef {Object} ProtectionMiddleware
+ * @property {function(Array&lt;*>): function(Request, Response, NextFunction): void} roleRequired - Returns a middleware function which allows access only if the user's role is in the allowedRoles array.
+ */
+
+/**
+ * An object containing middleware functions for protecting routes.
+ * @type {ProtectionMiddleware}
+ */
+export const protectionMiddleware = {
+  /**
+   * Returns an Express middleware function that restricts access based on allowed roles.
+   *
+   * @function roleRequired
+   *
+   * @param {Array&lt;Role>} allowedRoles - An array of roles permitted to access the route.
+   *
+   * @returns {function(Request, Response, NextFunction): void} Middleware function that checks the user's role.
+   */
+  roleRequired: (allowedRoles) => {
+    return (req, res, next) => {
+      if (!req.session.user) {
+        if (req.method === "GET") {
+          const nextQuery = req.originalUrl
+            ? `?next=${encodeURIComponent(req.originalUrl)}`
+            : "";
+          res.redirect("/auth/login" + nextQuery);
+        } else {
+          next({ status: 401, message: "Unauthorized" });
+        }
+        return;
+      }
+
+      if (!allowedRoles.includes(req.session.user.role)) {
+        next({ status: 401, message: "Unauthorized" });
+        return;
+      }
+      next();
+    };
+  },
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-app.html">app</a></li><li><a href="module-controllers_adminController.html">controllers/adminController</a></li><li><a href="module-controllers_auth_loginController.html">controllers/auth/loginController</a></li><li><a href="module-controllers_auth_logoutController.html">controllers/auth/logoutController</a></li><li><a href="module-controllers_auth_registerController.html">controllers/auth/registerController</a></li><li><a href="module-controllers_postController.html">controllers/postController</a></li><li><a href="module-controllers_userController.html">controllers/userController</a></li><li><a href="module-middleware_cookieMiddleware.html">middleware/cookieMiddleware</a></li><li><a href="module-middleware_errorMiddleware.html">middleware/errorMiddleware</a></li><li><a href="module-middleware_logMiddleware.html">middleware/logMiddleware</a></li><li><a href="module-middleware_protectionMiddleware.html">middleware/protectionMiddleware</a></li><li><a href="module-middleware_pugMiddleware.html">middleware/pugMiddleware</a></li><li><a href="module-models_post.html">models/post</a></li><li><a href="module-models_user.html">models/user</a></li><li><a href="module-public_js_admin.html">public/js/admin</a></li><li><a href="module-public_js_auth_login.html">public/js/auth/login</a></li><li><a href="module-public_js_auth_logout.html">public/js/auth/logout</a></li><li><a href="module-public_js_auth_register.html">public/js/auth/register</a></li><li><a href="module-public_js_drawer.html">public/js/drawer</a></li><li><a href="module-public_js_navbar.html">public/js/navbar</a></li><li><a href="module-public_js_posts.html">public/js/posts</a></li><li><a href="module-public_js_postsForm.html">public/js/postsForm</a></li><li><a href="module-public_js_snackbar.html">public/js/snackbar</a></li><li><a href="module-public_js_utils.html">public/js/utils</a></li><li><a href="module-routes_admin.html">routes/admin</a></li><li><a href="module-routes_auth.html">routes/auth</a></li><li><a href="module-routes_posts.html">routes/posts</a></li><li><a href="module-routes_static.html">routes/static</a></li><li><a href="module-routes_user.html">routes/user</a></li><li><a href="module-util_controller.html">util/controller</a></li><li><a href="module-util_data.html">util/data</a></li><li><a href="module-util_types.html">util/types</a></li></ul><h3>Classes</h3><ul><li><a href="module-models_post-Post.html">Post</a></li><li><a href="module-models_user-User.html">User</a></li></ul><h3>Events</h3><ul><li><a href="module-admin.html#~event:newUserSubmit">newUserSubmit</a></li><li><a href="module-admin.html#~event:roleChangeSubmit">roleChangeSubmit</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Mon Mar 10 2025 11:48:36 GMT+0100 (Central European Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

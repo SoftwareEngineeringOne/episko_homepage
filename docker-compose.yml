@@ -6,26 +6,17 @@ services:
     restart: always
     environment:
       NODE_ENV: "production"
-    develop:
-      watch:
-        - action: rebuild
-          path: ./src/**/*
 
   nginx:
     image: nginx:latest
     container_name: nginx
     restart: always
     ports:
-      - "4430:443"
-      - "8080:80"
+      - "443:443"
+      - "80:80"
     volumes:
-      - ./nginx/:/etc/nginx/
+      - ./nginx/docker/:/etc/nginx/
       - ./public:/var/www/episko:ro
       - ./certs:/etc/ssl/nginx
     depends_on:
       - nodejs
-    develop:
-      watch:
-        - action: sync
-          path: ./public/**/*
-          target: /var/www/episko

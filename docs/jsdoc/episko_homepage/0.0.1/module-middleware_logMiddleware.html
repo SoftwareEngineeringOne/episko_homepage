@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Module: middleware/logMiddleware</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Module: middleware/logMiddleware</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description">Middleware to log the request method, URL, and timestamp.
+
+This middleware prints an informational log with the current ISO timestamp,
+the requested URL, and the HTTP request method.</div>
+        
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="src_middleware_logMiddleware.js.html">src/middleware/logMiddleware.js</a>, <a href="src_middleware_logMiddleware.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~consoleLogger"><span class="type-signature">(inner) </span>consoleLogger<span class="signature">(req, _res, next)</span><span class="type-signature"> &rarr; {void}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Logs an informational message with the current timestamp, request URL, and HTTP method.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>req</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Request</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Express request object.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_res</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Response</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Express response object (unused).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>next</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">NextFunction</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Express next middleware function.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="src_middleware_logMiddleware.js.html">src/middleware/logMiddleware.js</a>, <a href="src_middleware_logMiddleware.js.html#line9">line 9</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">void</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-app.html">app</a></li><li><a href="module-controllers_adminController.html">controllers/adminController</a></li><li><a href="module-controllers_auth_loginController.html">controllers/auth/loginController</a></li><li><a href="module-controllers_auth_logoutController.html">controllers/auth/logoutController</a></li><li><a href="module-controllers_auth_registerController.html">controllers/auth/registerController</a></li><li><a href="module-controllers_postController.html">controllers/postController</a></li><li><a href="module-controllers_userController.html">controllers/userController</a></li><li><a href="module-middleware_cookieMiddleware.html">middleware/cookieMiddleware</a></li><li><a href="module-middleware_errorMiddleware.html">middleware/errorMiddleware</a></li><li><a href="module-middleware_logMiddleware.html">middleware/logMiddleware</a></li><li><a href="module-middleware_protectionMiddleware.html">middleware/protectionMiddleware</a></li><li><a href="module-middleware_pugMiddleware.html">middleware/pugMiddleware</a></li><li><a href="module-models_post.html">models/post</a></li><li><a href="module-models_user.html">models/user</a></li><li><a href="module-public_js_admin.html">public/js/admin</a></li><li><a href="module-public_js_auth_login.html">public/js/auth/login</a></li><li><a href="module-public_js_auth_logout.html">public/js/auth/logout</a></li><li><a href="module-public_js_auth_register.html">public/js/auth/register</a></li><li><a href="module-public_js_drawer.html">public/js/drawer</a></li><li><a href="module-public_js_navbar.html">public/js/navbar</a></li><li><a href="module-public_js_posts.html">public/js/posts</a></li><li><a href="module-public_js_postsForm.html">public/js/postsForm</a></li><li><a href="module-public_js_snackbar.html">public/js/snackbar</a></li><li><a href="module-public_js_utils.html">public/js/utils</a></li><li><a href="module-routes_admin.html">routes/admin</a></li><li><a href="module-routes_auth.html">routes/auth</a></li><li><a href="module-routes_posts.html">routes/posts</a></li><li><a href="module-routes_static.html">routes/static</a></li><li><a href="module-routes_user.html">routes/user</a></li><li><a href="module-util_controller.html">util/controller</a></li><li><a href="module-util_data.html">util/data</a></li><li><a href="module-util_types.html">util/types</a></li></ul><h3>Classes</h3><ul><li><a href="module-models_post-Post.html">Post</a></li><li><a href="module-models_user-User.html">User</a></li></ul><h3>Events</h3><ul><li><a href="module-admin.html#~event:newUserSubmit">newUserSubmit</a></li><li><a href="module-admin.html#~event:roleChangeSubmit">roleChangeSubmit</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Mon Mar 10 2025 11:48:36 GMT+0100 (Central European Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -10,8 +10,8 @@
  */
 
 import express from "express";
-import { AdminController } from "../controllers/admin/adminController.js";
-import { UserController } from "../controllers/user/userController.js";
+import { AdminController } from "../controllers/adminController.js";
+import { UserController } from "../controllers/userController.js";
 import { protectionMiddleware } from "../middleware/protectionMiddleware.js";
 import { Roles } from "../models/user.js";
 

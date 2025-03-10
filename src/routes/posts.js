@@ -10,7 +10,7 @@
  */
 
 import express from "express";
-import { PostController } from "../controllers/post/postController.js";
+import { PostController } from "../controllers/postController.js";
 import { Roles } from "../models/user.js";
 import { protectionMiddleware } from "../middleware/protectionMiddleware.js";
 

@@ -2,39 +2,24 @@
 
 set -euo pipefail
 
-confirm() {
-    echo "$1"
-    while true; do
-        read -r -p "Are you sure, you want to continue? [y/n]: " response
-        case "$response" in
-            [yY]) return 0 ;;
-            [nN]) return 1 ;;
-            *) echo "Invalid response. Please type y or n." ;;
-        esac
-    done
-}
-
 echo "WARNING: As of now this script is untested!"
 echo ""
 
 echo "Setting up nginx..."
-if ! confirm "This action may override existing nginx settings!"; then
-    echo "You can setup nginx manually using the files located in ./nginx!"
-    exit 0
-fi
-echo ""
 
 echo "Hint: root permissions may be required to setup the necessary configs"
 echo ""
 
 
 echo "Copying nginx config..."
-sudo mkdir -p /etc/nginx
-sudo cp -r ./nginx/* /etc/nginx
+sudo mkdir -p /etc/nginx/sites-enabled
+sudo mkdir -p /etc/nginx/sites-available
+sudo cp ./nginx/sites-enabled/episko.conf /etc/nginx/sites-available/episko.conf
+sudo ln -s /etc/nginx/sites-available/episko.conf /etc/nginx/sites-enabled/episko.conf
 
 echo "Copying ssl certificates... (these are not secure)"
-sudo mkdir -p /etc/ssl/nginx
-sudo cp ./certs/* /etc/ssl/nginx
+sudo mkdir -p /etc/ssl/nginx/episko
+sudo cp ./certs/* /etc/ssl/nginx/episko
 
 echo "(Re)Compiling static homepage"
 npm ci --omit dev
@@ -43,9 +28,10 @@ node compile_static.js
 echo "Copying static files..."
 sudo mkdir -p /var/www/episko
 sudo chown $USER /var/www/episko
-cp -r ./public /var/www/episko
+cp -r ./public/* /var/www/episko
 
 echo "Setting up nginx complete!"
+echo "Make sure there are no conflicting ports in /etc/nginx/sites-enabled"
 echo "You can now run \"npm run\" and access the application"
 
 
