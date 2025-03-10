@@ -1,0 +1,19 @@
+@startuml Request
+' Define aliases
+actor Browser as B
+participant "Middleware\n(protectionMiddleware: adminAuthorOnly)" as MiddleWare
+participant "Router\n(src/routes/posts.js)" as Router
+participant "PostController.createPost\n(controllers/postController.js)" as PostController
+participant "Post.save()\n(models/post.js)" as Save
+participant "Data\n(posts.json)" as FileSystem
+
+B -> MiddleWare : POST /posts
+MiddleWare -> Router : Validate & forward
+Router -> PostController : Call createPost
+PostController -> Save : Create new Post & save
+Save -> FileSystem : Read posts, add new post
+FileSystem --> Save
+Save --> PostController : Return success
+PostController --> B : HTTP 201 Created
+
+@enduml

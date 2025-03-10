@@ -1,0 +1,36 @@
+@startuml Server
+left to right direction
+
+
+skinparam nodesep 10
+skinparam ranksep 50
+
+component Browser as browser
+
+rectangle "NGINX Server" {
+    [nginx]
+    [Statische Dateien] as static
+}
+
+rectangle "Node.js Server" {
+    [node]
+    [JSON Data] as data
+    [Templates]
+}
+    
+
+browser --> nginx: Request
+nginx --> browser: Response
+
+nginx <--> static: Serve
+
+nginx --> node: Dynamic content
+node --> nginx: Response
+node <--> Templates: Render
+
+node --> data: Query/Update
+
+
+
+
+@enduml

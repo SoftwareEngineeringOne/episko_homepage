@@ -1,0 +1,27 @@
+@startuml MVC Architecture
+left to right direction
+
+rectangle "View" {
+  [Login Form]
+}
+
+rectangle "Controller" {
+  [AuthController]
+}
+
+rectangle "Model" {
+  [User Model]
+}
+
+database "JSON-Data" as DB
+
+[View] --> [Router] : UI events
+' Express router
+[Router] --> [Controller] : routes requests
+
+[Controller] --> [Model] : fetch/update data
+[Controller] --> [View] : render response
+
+[Model] --> DB : query/update
+DB --> [Model] : results
+@enduml

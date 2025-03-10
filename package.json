@@ -7,8 +7,9 @@
   "scripts": {
     "test": "echo \"Info: no test specified\" && exit 0",
     "start": "NODE_ENV=production node src/app.js",
+    "dev": "NODE_ENV=development node src/app.js",
     "format": "prettier --write .",
-    "dev": "nodemon -e pug,css,js src/app.js",
+    "watch": "nodemon -e pug,css,js src/app.js",
     "docs": "jsdoc -d docs/jsdoc -P package.json -r -p src/app.js src/**/*.js src/**/**/*.js public/js/*.js public/js/**/*.js public/js/**/**.js"
   },
   "author": "",
