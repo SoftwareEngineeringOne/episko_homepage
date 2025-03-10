@@ -14,7 +14,7 @@ echo ""
 echo "Copying nginx config..."
 sudo mkdir -p /etc/nginx/sites-enabled
 sudo mkdir -p /etc/nginx/sites-available
-sudo cp ./nginx/sites-enabled/episko.conf /etc/nginx/sites-available/episko.conf
+sudo cp ./nginx/episko.conf /etc/nginx/sites-available/episko.conf
 sudo ln -s /etc/nginx/sites-available/episko.conf /etc/nginx/sites-enabled/episko.conf
 
 echo "Copying ssl certificates... (these are not secure)"
