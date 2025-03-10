@@ -1,9 +1,9 @@
 extends ../layout
 
 block content
-  main.container
+  main.container.posts-grid
     .post-header
-      h1 Latest Posts from #{ user }
+      h1.fg-accent Latest Posts from #{ user }
 
     .posts-grid
       each post in posts

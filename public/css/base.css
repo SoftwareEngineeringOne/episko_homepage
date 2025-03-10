@@ -8,7 +8,7 @@
   --color-accent: #df6d14;
   --color-border: lightgray;
   --color-on-surface: #000000;
-  --color-on-primary: #000000;
+  --color-on-primary: #ffffff;
   --color-on-secondary: #000000;
   --color-on-accent: #ffffff;
   --color-text-dim: #8e8e8e;
@@ -21,16 +21,24 @@
   background-color: transparent;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", sans-serif;
+  border: none;
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex-grow: 3;
+  margin-bottom: 10px;
 }
 
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
 section {
@@ -48,7 +56,15 @@ img {
   margin: 0;
 }
 
+/* --- Headings --- */
+h1,
+h2,
+h3 {
+  margin-bottom: 10px;
+}
+
 /* --- Buttons --- */
+button,
 .button {
   text-decoration: none;
   border-radius: var(--border-radius);
@@ -65,6 +81,21 @@ img {
 .button.outline {
   background-color: transparent;
   border: 1px var(--color-border) solid;
+}
+
+.text-button {
+  border: none;
+  background-color: transparent;
+  color: var(--color-primary);
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.text-button:hover {
+  text-decoration: underline;
 }
 
 /* --- Links --- */
@@ -161,6 +192,14 @@ form {
     transition: border-color 0.3s;
   }
 
+  textarea {
+    width: 92%;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    transition: border-color 0.3s;
+    padding: 5px;
+  }
+
   label {
     position: absolute;
     background-color: var(--card-color);
@@ -170,6 +209,7 @@ form {
     transition: all 0.3s ease;
   }
 
+  textarea::placeholder,
   input::placeholder {
     color: transparent;
     transition: opacity 0.3s ease;
@@ -183,10 +223,23 @@ form {
     }
   }
 
-  input:focus {
-    border-color: var(--color-primary);
-    outline: none;
-  }
+
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.form-group-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.area-label {
+  position: relative !important;
+  color: black !important;
 }
 
 /* General Utility Classes */
@@ -196,4 +249,20 @@ form {
 
 .w-80 {
   width: 80% !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.fg-accent {
+  color: var(--color-accent);
+}
+
+.fg-secondary {
+  color: var(--color-secondary);
+}
+
+.underline {
+  text-decoration: underline;
 }

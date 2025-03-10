@@ -12,14 +12,14 @@ block content
             h1.text-center episko
             p.text-center All of your projects in one place
             .cta-container
-                a.button(href="/auth/register") Get Started
+                a.button(target="_blank", href="https://github.com/SoftwareEngineeringOne/episko/releases/latest") Get Started
                 a.button.outline(
-                    href="https://github.com/SoftwareEngineeringOne/episkos",
-                    target="_blank"
+                    target="_blank",
+                    href="https://docs.rs/episko_lib/1.1.0/episko_lib/"
                 ) Documentation
 
+    hr
     section.highlights
-        h2 Highlights
         .flex-grid.highlights
             .card.card-hover
                 h3 🚀 Fast Performance
@@ -31,7 +31,12 @@ block content
                 h3 📱 Intuitive
                 p The modern and intuitive Design ensures Episko to be simple to understand and easy to use.
 
-    button.button(onclick='showSnackbarError("An error has occured")') Trigger Snackbar
-
+    hr
     section.about
+        h2 What is episko?
+        p.
+            Episko is a simple tool that, helps developers to have their software projects together all at one point.
+            No matter which version control or IDE you're using, Episko will have all relevant information about your project ready for you. 
+            No more searching for forgotten old projects - Episko will know where you saved them. Just search for the name, the programming language or any other detail of your project, and you'll get a list of all matching ones within the blink of an eye!
+        a.fg-accent(href="/about") Learn more...
         

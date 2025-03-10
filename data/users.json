@@ -33,5 +33,26 @@
     "username": "test",
     "password": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
     "role": "user"
+  },
+  {
+    "firstName": "Paul",
+    "lastName": "Stöckle",
+    "username": "DosKobold",
+    "password": "0357513deb903a056e74a7e475247fc1ffe31d8be4c1d4a31f58dd47ae484100",
+    "role": "admin"
+  },
+  {
+    "firstName": "Ben",
+    "lastName": "Oeckl",
+    "username": "benoeckl",
+    "password": "6700869c8ff7480e34a70a708b028700dbaa3a033b5652b903afe89f49a31456",
+    "role": "admin"
+  },
+  {
+    "firstName": "Max",
+    "lastName": "Rodler",
+    "username": "MaxRodler",
+    "password": "9baf3a40312f39849f46dad1040f2f039f1cffa1238c41e9db675315cfad39b6",
+    "role": "admin"
   }
 ]

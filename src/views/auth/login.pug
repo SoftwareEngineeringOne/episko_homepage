@@ -16,7 +16,7 @@ block content
                     .form-input
                         label(for="password") Password
                         input#password(type="password", name="password", placeholder="Password" required)
-                button.button(type="submit") Sign In
+                button.button.w-100(type="submit") Sign In
             div
-                span Don't have an account?
+                span Don't have an account?&nbsp;
                 a(href=`/auth/register?next=${encodeURIComponent(originalUrl)}`) Register

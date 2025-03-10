@@ -63,6 +63,7 @@ export function showSnackbarSuccess(message) {
  * @returns {void}
  */
 export function showSnackbarError(message) {
+  console.log("showing snackbar");
   showSnackbar(message, 'error');
 }
 

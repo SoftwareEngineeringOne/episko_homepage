@@ -15,10 +15,13 @@ block content
           p= post.content
 
         .post-meta
-          span Posted by #{ post.author } on 
+          span Posted by&nbsp;
+          a(href=`/user/${post.author}`) #{ post.author }
+          span &nbsp;on&nbsp;
           span= post.createdAt.toLocaleDateString()
 
-        .post-actions
-          if session.loggedIn
-            if session.user.role === 'admin' || (session.user.role === 'author' && session.user.username === post.author)
+      .post-actions
+          if session.user && ( session.user.role === 'admin' || (session.user.role === 'author' && session.user.username === post.author))
+            .container
               a.button(href=`/posts/${post.id}/edit`) Edit Post
+              a.button(href=`/posts/${post.id}/edit`) Delete Post

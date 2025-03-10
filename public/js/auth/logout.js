@@ -3,6 +3,7 @@
  * @description Script for handling the logout process.
  * It sends a POST request to log the user out and reloads the page upon success.
  */
+import { showSnackbarError } from "./snackbar.js";
 
 /**
  * Asynchronously logs out the current user.
@@ -20,6 +21,8 @@ async function logout() {
     window.location.reload();
   } else {
     console.error("Failed to log out");
+    showSnackbarError("Failed to log out!");
+
   }
 }
 

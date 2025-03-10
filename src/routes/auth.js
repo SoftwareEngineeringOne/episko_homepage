@@ -15,6 +15,14 @@ import { LogoutController } from "../controllers/auth/logoutController.js";
 
 const router = express.Router();
 
+router.get("/", (req, res) => {
+  if (req.session.user) {
+    res.redirect(`/user/${req.session.user.username}`)
+  } else {
+    res.redirect(`/auth/login?next=${encodeURIComponent("/posts")}`)
+  }
+})
+
 /**
  * @route GET /login
  * @description Renders the login form for the user.
@@ -50,11 +58,11 @@ router.get("/register", RegisterController.displayRegisterForm);
 router.post("/register", RegisterController.handleRegisterRequest);
 
 /**
- * @route GET /logout
+ * @route POST /logout
  * @description Logs out the current user and terminates the session.
  * @param {Request} req - Express request object.
  * @param {Response} res - Express response object.
  */
-router.get("/logout", LogoutController.handleLogoutRequest);
+router.post("/logout", LogoutController.handleLogoutRequest);
 
 export default router;

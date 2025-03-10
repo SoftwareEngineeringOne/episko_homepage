@@ -1,0 +1,40 @@
+@startuml MVC Architecture
+skinparam linetype polyline
+skinparam linetype ortho
+
+skinparam nodesep 10
+skinparam ranksep 20
+
+rectangle "Controller" {
+  [UserController]
+  [LoginController]
+  [RegisterController]
+  [AuthController]
+  [PostController]
+  [AdminController]
+}
+
+rectangle "Model" {
+  [User Model]
+  [Post Model]
+}
+
+rectangle "View" {
+  [Pug Templates]
+  [Static Html Files]
+}
+
+
+
+database "JSON-Data" as DB
+
+' Express router
+[Router] --> [Controller] : routes requests
+
+[Controller] --> [Model] : fetch/update data
+[Controller] --> [View] : render response
+[View] --> [Router] : UI events
+
+[Model] --> DB : query/update
+DB --> [Model] : results
+@enduml

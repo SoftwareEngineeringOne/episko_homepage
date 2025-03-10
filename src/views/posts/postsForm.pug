@@ -7,9 +7,9 @@ block content
   main.container
     .card.post-form
       if !existing_post
-        h1 Create New Post
+        h2.fg-accent Create New Post
       else
-        h1 Edit Post
+        h2.fg-accent Edit Post
 
       form#post-form(
         method="POST",
@@ -21,12 +21,14 @@ block content
             input#title.form-input(
               name="title",
               type="text",
+              placeholer="Title",
               required,
               value=existing_post ? existing_post.title: ""
             )
-        .form-group
-          label(for="content") Content
+        .form-group.form-group-area
+          label.area-label(for="content") Content
           textarea#content.form-input(name="content", rows="8", required)= existing_post ? existing_post.content : ""
+
         .post-actions
           button.button.w-full(type="submit")= existing_post ? "Update Post" : "Publish Post"
           if existing_post

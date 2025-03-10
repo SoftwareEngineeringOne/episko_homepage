@@ -17,6 +17,8 @@ import { Roles } from "../models/user.js";
 
 const router = express.Router();
 
+router.get("/dashboard", AdminController.displayAdminDashboard);
+
 /**
  * @function Middleware
  * @description Ensures that the request is made by a user with ADMIN privileges.
@@ -40,7 +42,6 @@ router.get("/", (_req, res) => {
  * @param {Request} req - Express request object.
  * @param {Response} res - Express response object.
  */
-router.get("/dashboard", AdminController.displayAdminDashboard);
 
 /**
  * @route POST /users/:username/role

@@ -5,7 +5,7 @@ block scripts
 
 block content
     .size-warning
-        h2 Warning! This page should be used on a smartphone screen.
+        h2 Warning! This page should not be used on a smartphone screen.
         p Please open this page on a larger device!
     .large-only
         h1 Users
@@ -32,10 +32,11 @@ block content
                                     option(value="user", selected= user.role == 'user') User
                                     option(value="author", selected= user.role == 'author') Author
                                     option(value="admin", selected= user.role == 'admin') Admin
-                                button(type="submit") Apply
+                                button.text-button.underline(type="submit") Apply
                         td
-                            a(href=`/user/${user.username}`) View
-                            button(onclick=`deleteUser('${user.username}')`) Delete
+                            .container
+                                a.text-button.underline(href=`/user/${user.username}`) View
+                                button.text-button.underline(onclick=`deleteUser('${user.username}')`) Delete
 
                 tr
 
@@ -54,7 +55,7 @@ block content
                             option(value="author") Author
                             option(value="admin") Admin
                     td
-                        button(form="new-user-form", type="submit") Create
+                        button.text-button(form="new-user-form", type="submit") Create
 
 
 
@@ -75,10 +76,11 @@ block content
                         td= post.author
                         td= post.status
                         td
-                            a(href=`/posts/${post.id}/read`) View
-                            a(href=`/posts/${post.id}/edit`) Edit
-                            button(onclick=`deletePost('${post.id}')`) Delete
-                            if post.status !== 'published'
-                                button(onclick=`approvePost('${post.id}')`) Publish
-                            if post.status === 'published'
-                                button(onclick=`archivePost('${post.id}')`) Archive
+                            .container
+                                a.text-button.underline(href=`/posts/${post.id}/read`) View
+                                a.text-button.underline(href=`/posts/${post.id}/edit`) Edit
+                                button.text-button.underline(onclick=`deletePost('${post.id}')`) Delete
+                                if post.status !== 'published'
+                                    button.text-button.underline(onclick=`approvePost('${post.id}')`) Publish
+                                if post.status === 'published'
+                                    button.text-button.underline(onclick=`archivePost('${post.id}')`) Archive

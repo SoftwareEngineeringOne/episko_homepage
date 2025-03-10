@@ -11,7 +11,7 @@
     "id": "4ae68704-1d8c-4eae-83ba-21d434cea4a8",
     "title": "Development plan finished",
     "content": "Our plan on how we approach this project is finished, and we are already thinking about all the features we want to implement. Is there anything you definitely want to see in the App? Hit us up via devs@episko.com, tell us about your idea, and we will try to realize it.",
-    "author": "author",
+    "author": "DosKobold",
     "createdAt": "2024-11-13T17:37:16.180Z",
     "status": "published"
   },
@@ -37,6 +37,22 @@
     "content": "test1234",
     "author": "admin",
     "createdAt": "2025-03-07T14:16:07.170Z",
+    "status": "published"
+  },
+  {
+    "id": "cbe92ee5858e998367f53ffaeca3a0334950f79f66a99c97",
+    "title": "Ein Test",
+    "content": "12234545trgfg",
+    "author": "admin",
+    "createdAt": "2025-03-10T09:11:52.119Z",
+    "status": "published"
+  },
+  {
+    "id": "8f6aabbe701ce2635973287faf27544b14cb3075ad127db2",
+    "title": "Authored by an author",
+    "content": "Cool stuff",
+    "author": "author",
+    "createdAt": "2025-03-10T10:28:07.934Z",
     "status": "published"
   }
 ]

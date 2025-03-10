@@ -3,6 +3,7 @@
 
 head
     script(src="/js/auth/logout.js", type="module")
+    script(src="/js/navbar.js", type="module")
     script(src="/js/drawer.js", type="module")
 
 nav
@@ -15,15 +16,16 @@ nav
             a(href="/") Home
             a(href="/about") About
             a(href="/posts") Posts
-            if session.user === undefined
-                a.button.call-to-action(
-                    href=`/auth/register?next=${encodeURIComponent(originalUrl)}`
-                ) Get Started
-            else
+            if session.user 
                 if session.user.role == 'admin'
                     a(href="/admin") Admin
-                a(href=`/profile/${session.user.username}`)= session.user.username
-                button.button.call-to-action(onclick="logout()") Logout
+
+                a.logout-link Logout
+
+            a.button.call-to-action(
+target="_blank", rel="noopener noreferrer",
+                href="https://github.com/SoftwareEngineeringOne/episko/releases/latest"
+            ) Get Started
 
         button#menu-toggle(type="button") &#9776;
 
@@ -33,15 +35,18 @@ nav
                 li: a(href="/") Home
                 li: a(href="/about") About
                 li: a(href="/posts") Posts
-                if session.user === undefined
-                    .cta-drawer
-                        a.button.call-to-action(
-                            href=`/auth/register?next=${encodeURIComponent(originalUrl)}`
-                        ) Get Started
-                else 
+
+                if session.user 
                     if session.user.role == 'admin'
-                        li: a(href="/admin") Admin
-                    li: a(href=`/profile/${session.user.username}`)= session.user.username
-                    li: a(onclick="logout()") Logout
+                        li: a(href="/admin") Admin Panel
+
+                    li: a(href=`/profile/${session.user.username}`) Profile
+                    li: a.logout-link Logout
+
+                .cta-drawer
+                    a.button.call-to-action(
+        target="_blank", rel="noopener noreferrer",
+                        href="https://github.com/SoftwareEngineeringOne/episko/releases/latest"
+                    ) Get Started
 
         div#overlay
