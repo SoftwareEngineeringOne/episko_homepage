@@ -17,18 +17,14 @@
   "dependencies": {
     "express": "^4.21.2",
     "express-session": "^1.18.1",
-    "prettier-plugin-toml": "^2.0.1",
     "pug": "^3.0.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
     "@prettier/plugin-pug": "^3.2.0",
-    "connect-livereload": "^0.6.1",
-    "docolatte": "^4.5.1",
+    "prettier-plugin-toml": "^2.0.1",
     "eslint": "^9.19.0",
-    "globals": "^15.14.0",
     "jsdoc": "^4.0.4",
-    "livereload": "^0.9.3",
     "nodemon": "^3.1.9",
     "prettier": "^3.4.2"
   }

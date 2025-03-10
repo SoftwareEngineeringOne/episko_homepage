@@ -17,6 +17,6 @@ services:
     volumes:
       - ./nginx/docker/:/etc/nginx/
       - ./public:/var/www/episko:ro
-      - ./certs:/etc/ssl/nginx
+      - ./certs:/etc/ssl/nginx/episko
     depends_on:
       - nodejs

@@ -30,6 +30,12 @@ sudo mkdir -p /var/www/episko
 sudo chown $USER /var/www/episko
 cp -r ./public/* /var/www/episko
 
+echo "Testing nginx config..."
+sudo nginx -t || echo "Nginx config invalid"; exit 1;
+
+echo "Restarting nginx service..."
+sudo systemctl restart nginx
+
 echo "Setting up nginx complete!"
 echo "Make sure there are no conflicting ports in /etc/nginx/sites-enabled"
 echo "You can now run \"npm run\" and access the application"
