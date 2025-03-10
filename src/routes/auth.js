@@ -1,68 +1,60 @@
-import express from "express";
-import { registerController } from "../controllers/auth/registerController.js";
-import { loginController } from "../controllers/auth/loginController.js";
-import { logoutController } from "../controllers/auth/logoutController.js";
-
 /**
  * @module routes/auth
+ * @description Express router providing API endpoints for authentication tasks.
+ * 
+ * @requires express
+ * @requires ../controllers/auth/registerController
+ * @requires ../controllers/auth/loginController
+ * @requires ../controllers/auth/logoutController
  */
 
-/** Express router providing auth routes */
+import express from "express";
+import { RegisterController } from "../controllers/auth/registerController.js";
+import { LoginController } from "../controllers/auth/loginController.js";
+import { LogoutController } from "../controllers/auth/logoutController.js";
+
 const router = express.Router();
 
 /**
- * Route serving login page.
- * @name get/login
- * @function
- * @memberof module:routes/auth
- * @inner
- * @param {express.Request} req - The request object.
- * @param {express.Response} res - The response object.
+ * @route GET /login
+ * @description Renders the login form for the user.
+ * @param {Request} req - Express request object.
+ * @param {Response} res - Express response object.
  */
-router.get("/login", loginController.handleGetRequest);
+router.get("/login", LoginController.displayLoginForm);
 
 /**
- * Route handling login form submission.
- * @name post/login
- * @function
- * @memberof module:routes/auth
- * @inner
- * @param {express.Request} req - The request object.
- * @param {express.Response} res - The response object.
+ * @route POST /login
+ * @description Handles the login request submitted by the user.
+ * @param {Request} req - Express request object containing:
+ *   @property {Object} body - Login credentials.
+ * @param {Response} res - Express response object.
  */
-router.post("/login", loginController.handlePostRequest);
+router.post("/login", LoginController.handleLoginRequest);
 
 /**
- * Route serving registration page.
- * @name get/register
- * @function
- * @memberof module:routes/auth
- * @inner
- * @param {express.Request} req - The request object.
- * @param {express.Response} res - The response object.
+ * @route GET /register
+ * @description Renders the registration form for the user.
+ * @param {Request} req - Express request object.
+ * @param {Response} res - Express response object.
  */
-router.get("/register", registerController.handleGetRequest);
+router.get("/register", RegisterController.displayRegisterForm);
 
 /**
- * Route handling registration form submission.
- * @name post/register
- * @function
- * @memberof module:routes/auth
- * @inner
- * @param {express.Request} req - The request object.
- * @param {express.Response} res - The response object.
+ * @route POST /register
+ * @description Handles the registration request and creates a new user.
+ * @param {Request} req - Express request object containing:
+ *   @property {Object} body - New user registration data.
+ * @param {Response} res - Express response object.
  */
-router.post("/register", registerController.handlePostRequest);
+router.post("/register", RegisterController.handleRegisterRequest);
 
 /**
- * Route handling logout request.
- * @name post/logout
- * @function
- * @memberof module:routes/auth
- * @inner
- * @param {express.Request} req - The request object.
- * @param {express.Response} res - The response object.
+ * @route GET /logout
+ * @description Logs out the current user and terminates the session.
+ * @param {Request} req - Express request object.
+ * @param {Response} res - Express response object.
  */
-router.post("/logout", logoutController.handlePostRequest);
+router.get("/logout", LogoutController.handleLogoutRequest);
 
 export default router;

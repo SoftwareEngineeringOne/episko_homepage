@@ -6,8 +6,8 @@
  * @requires ../../models/user.js
  * @requires ../../util/controller.js
  */
-import Post, {Status} from "../../models/post.js";
-import {Roles} from "../../models/user.js";
+import Post, { Statusse } from "../../models/post.js";
+import { Roles } from "../../models/user.js";
 import {
   endBadRequest,
   endInternalError,
@@ -31,7 +31,8 @@ export const PostController = {
   /**
    * Renders the public posts page.
    *
-   * @function
+   * @async
+   * @function displayPublicPosts
    * @param {Request} _req - Express request object (unused).
    * @param {Response} res - Express response object.
    * @param {NextFunction} next - Express next middleware function.
@@ -50,7 +51,8 @@ export const PostController = {
   /**
    * Renders a single post based on the provided ID.
    *
-   * @function
+   * @async
+   * @function displayPostWithId
    * @param {Request} req - Express request object.
    * @param {Response} res - Express response object.
    * @param {NextFunction} next - Express next middleware function.
@@ -76,7 +78,8 @@ export const PostController = {
   /**
    * Renders the form for creating or editing a post.
    *
-   * @function
+   * @async
+   * @function displayForm
    * @param {Request} req - Express request object.
    * @param {Response} res - Express response object.
    * @param {NextFunction} next - Express next middleware function.
@@ -106,7 +109,8 @@ export const PostController = {
   /**
    * Creates a new post using the title and content provided.
    *
-   * @function
+   * @async
+   * @function createPost
    * @param {Request} req - Express request object.
    * @param {Response} res - Express response object.
    * @returns {Promise<void>}
@@ -127,7 +131,8 @@ export const PostController = {
   /**
    * Updates an existing post.
    *
-   * @function
+   * @async
+   * @function updatePost
    * @param {Request} req - Express request object.
    * @param {Response} res - Express response object.
    * @returns {Promise<void>}
@@ -165,31 +170,34 @@ export const PostController = {
   /**
    * Publishes a post by setting its status to published.
    *
-   * @function
+   * @async
+   * @function publishPost
    * @param {Request} req - Express request object.
    * @param {Response} res - Express response object.
    * @returns {Promise<void>}
    */
   publishPost: async (req, res) => {
-    await changePostStatus(req, res, Status.PUBLISHED);
+    await changePostStatus(req, res, Statusse.PUBLISHED);
   },
 
   /**
    * Archives a post by setting its status to archived.
    *
-   * @function
+   * @async
+   * @function archivePost
    * @param {Request} req - Express request object.
    * @param {Response} res - Express response object.
    * @returns {Promise<void>}
    */
   archivePost: async (req, res) => {
-    await changePostStatus(req, res, Status.ARCHIVED);
+    await changePostStatus(req, res, Statusse.ARCHIVED);
   },
 
   /**
    * Deletes a post.
    *
-   * @function
+   * @async
+   * @function deletePost
    * @param {Request} req - Express request object.
    * @param {Response} res - Express response object.
    * @returns {Promise<void>}
@@ -219,6 +227,7 @@ export const PostController = {
  * Changes the status of a post.
  *
  * @private
+ * @async
  * @function changePostStatus
  * @param {Request} req - Express request object.
  * @param {Response} res - Express response object.

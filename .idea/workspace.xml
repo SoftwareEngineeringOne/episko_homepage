@@ -5,32 +5,82 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d772c343-1755-4659-b46a-6c9a0933bd47" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/public/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flake.nix" beforeDir="false" afterPath="$PROJECT_DIR$/flake.nix" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx/sites-enabled/episko.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/sites-enabled/episko.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/Post.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/User.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/controllers_post_postController.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/fonts/OpenSans-Bold-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/fonts/OpenSans-Bold-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/fonts/OpenSans-Bold-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/fonts/OpenSans-BoldItalic-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/fonts/OpenSans-BoldItalic-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/fonts/OpenSans-BoldItalic-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/fonts/OpenSans-Italic-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/fonts/OpenSans-Italic-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/fonts/OpenSans-Italic-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/fonts/OpenSans-Light-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/fonts/OpenSans-Light-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/fonts/OpenSans-Light-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/fonts/OpenSans-LightItalic-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/fonts/OpenSans-LightItalic-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/fonts/OpenSans-LightItalic-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/fonts/OpenSans-Regular-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/fonts/OpenSans-Regular-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/fonts/OpenSans-Regular-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/global.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/middleware_cookie.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/middleware_errors.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/middleware_logger.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/models_post.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/models_user.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/module-routes_auth.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/routes_admin.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/routes_api.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/routes_auth.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/scripts/linenumber.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/scripts/prettify/Apache-License-2.0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/scripts/prettify/lang-css.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/scripts/prettify/prettify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/styles/jsdoc-default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/styles/prettify-jsdoc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/project/0.0.1/styles/prettify-tomorrow.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/hero_placeholder.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/hero_placeholder.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/logo_full_transparent_2048x2048.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/person.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/person.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/privacy.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/privacy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/terms.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/terms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup_nginx.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup_nginx.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/admin/adminController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/admin/adminController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/profile/profileController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/auth/loginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth/loginController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/auth/logoutController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth/logoutController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/auth/registerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth/registerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/post/postController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/post/postController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/user/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/posts.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/users.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/cookie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/cookieMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/errors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/errorMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/logMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/protected.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/protectionMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/pug.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/pugMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/admin/dashboard.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/dashboard.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/components/header.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/components/header.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/components/headerStatic.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/auth/login.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/auth/login.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/components/postPreview.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/components/postPreview.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/layout.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/profile/posts.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/user/posts.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/static/about.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/static/about.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/static/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/static/index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/posts/post.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/posts/post.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/posts/posts.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/posts/posts.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/posts/postsForm.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/posts/postsForm.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/static/privacy.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/static/privacy.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/static/terms.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/static/terms.pug" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,10 +90,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2u1ivOMXsSy8GKIV8hesWyPRydu" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -56,14 +109,19 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "22.14.0",
+    "javascript.nodejs.core.library.typings.version": "22.13.10",
     "last_opened_file_path": "/home/simon/2_Uni/webengineering/project/src/app.js",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "/nix/store/7l1wra7b87yci5dln0hm0k8rwww6f2xj-nodejs-22.14.0/bin/node",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/home/simon/2_Uni/webengineering/project/node_modules/prettier",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "/home/simon/.local/share/JetBrains/Toolbox/apps/webstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -97,7 +155,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741422712228</updated>
-      <workItem from="1741422716168" duration="3041000" />
+      <workItem from="1741422716168" duration="4391000" />
+      <workItem from="1741524842554" duration="962000" />
+      <workItem from="1741590657626" duration="116000" />
+      <workItem from="1741590803332" duration="222000" />
     </task>
     <servers />
   </component>

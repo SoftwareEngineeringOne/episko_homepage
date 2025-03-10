@@ -13,16 +13,17 @@ block content
 
       form#post-form(
         method="POST",
-        action=existing_post ? `/posts/${existing_post.id}` : "/posts"
+        action=existing_post ? `/posts/${existing_post.id}`: "/posts"
       )
         .form-group
-          label(for="title") Title
-          input#title.form-input(
-            name="title",
-            type="text",
-            required,
-            value=existing_post ? existing_post.title : ""
-          )
+          .form-input
+            label(for="title") Title
+            input#title.form-input(
+              name="title",
+              type="text",
+              required,
+              value=existing_post ? existing_post.title: ""
+            )
         .form-group
           label(for="content") Content
           textarea#content.form-input(name="content", rows="8", required)= existing_post ? existing_post.content : ""

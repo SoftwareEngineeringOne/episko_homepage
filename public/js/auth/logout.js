@@ -1,5 +1,17 @@
-console.log("logout.js script loaded");
+/**
+ * @module public/js/auth/logout
+ * @description Script for handling the logout process.
+ * It sends a POST request to log the user out and reloads the page upon success.
+ */
 
+/**
+ * Asynchronously logs out the current user.
+ *
+ * @async
+ * @function logout
+ * @returns {Promise<void>} Resolves when the logout process completes.
+ * @throws {Error} Logs an error if the logout request fails.
+ */
 async function logout() {
   const response = await fetch("/auth/logout", {
     method: "POST",
@@ -11,4 +23,5 @@ async function logout() {
   }
 }
 
+// Expose the logout function on the global window object
 window.logout = logout;

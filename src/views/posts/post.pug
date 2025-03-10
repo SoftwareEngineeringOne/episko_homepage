@@ -5,22 +5,20 @@ block scripts
 
 block content
   main.container
-    article.card.post-card
-      .post-header
-        h1= post.title
+    .post-full
+      a.back-action(href="/posts") ← Back to Posts
+      article.card.post-card
+        .post-header
+          h1= post.title
+
+        .post-content
+          p= post.content
+
         .post-meta
-          span Posted by #{ post.author }
+          span Posted by #{ post.author } on 
           span= post.createdAt.toLocaleDateString()
 
-      .post-content
-        p= post.content
-
-      .post-actions
-        if session.loggedIn
-          if session.user.role === 'admin' || session.user.username === post.author
-            a.button(href=`/posts/${post.id}/edit`) Edit Post
-        a.button.outline(href="/posts") Back to Posts
-
-    section.comment-section
-      h3 Comments (Coming Soon)
-      p We're working on our commenting system!
+        .post-actions
+          if session.loggedIn
+            if session.user.role === 'admin' || (session.user.role === 'author' && session.user.username === post.author)
+              a.button(href=`/posts/${post.id}/edit`) Edit Post

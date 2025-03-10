@@ -38,10 +38,11 @@ sudo cp ./certs/* /etc/ssl/nginx
 
 echo "(Re)Compiling static homepage"
 npm ci --omit dev
-node compile.js
+node compile_static.js
 
 echo "Copying static files..."
-mkdir -p /var/www/episko
+sudo mkdir -p /var/www/episko
+sudo chown $USER /var/www/episko
 cp -r ./public /var/www/episko
 
 echo "Setting up nginx complete!"

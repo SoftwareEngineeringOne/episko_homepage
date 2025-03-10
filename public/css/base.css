@@ -27,6 +27,12 @@ main {
   flex-grow: 3;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 section {
   display: flex;
   flex-direction: column;

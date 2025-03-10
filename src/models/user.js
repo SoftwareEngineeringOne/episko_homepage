@@ -1,9 +1,17 @@
+/**
+ * @module models/user
+ * @description Model representing users in the application.
+ * 
+ * @requires node:fs/promises
+ * @requires node:path
+ * @requires ../util/data.js
+ */
+
 import fs from "node:fs/promises";
 import path from "node:path";
-
 import { findEntryInData, readAndParseData } from "../util/data.js";
 
-const usersFile = path.join(process.cwd(), "src", "data", "users.json");
+const usersFile = path.join(process.cwd(), "data", "users.json");
 
 /**
  * @typedef {string} Role
@@ -11,10 +19,11 @@ const usersFile = path.join(process.cwd(), "src", "data", "users.json");
 
 /**
  * @typedef {Object} Roles
- * @property {Role} ADMIN The admin role.
- * @property {Role} AUTHOR The author role.
- * @property {Role} USER The user role. (default)
+ * @property {Role} ADMIN - The admin role.
+ * @property {Role} AUTHOR - The author role.
+ * @property {Role} USER - The user role (default).
  */
+
 /** @type {Readonly<Roles>} */
 export const Roles = Object.freeze({
   /** @type {Role} */
@@ -26,16 +35,16 @@ export const Roles = Object.freeze({
 });
 
 /**
- * User class
+ * Class representing a user.
  */
 class User {
   /**
-   * Creates a new User object.
+   * Creates a new User instance.
    *
-   * @param {string} firstName The first name of the user.
-   * @param {string} lastName The last name of the user.
-   * @param {string} username The username of the user.
-   * @param {Role} role The role of the user.
+   * @param {string} firstName - The first name of the user.
+   * @param {string} lastName - The last name of the user.
+   * @param {string} username - The username of the user.
+   * @param {Role} role - The role of the user.
    */
   constructor(firstName, lastName, username, role = Roles.USER) {
     /** @type {string} */
@@ -52,14 +61,14 @@ class User {
   }
 
   /**
-   * Creates a new User object from an object.
+   * Creates a new User instance from a plain object.
    *
-   * @param {object} obj The object to create the User from.
-   * @param {string} obj.firstName The first name of the user.
-   * @param {string} obj.lastName The last name of the user.
-   * @param {string} obj.username The username of the user.
-   * @param {Role} obj.role The role of the user.
-   * @returns {User|null} The created User object, or null if the object is invalid.
+   * @param {Object} obj - The object to create the user from.
+   * @param {string} obj.firstName - The first name of the user.
+   * @param {string} obj.lastName - The last name of the user.
+   * @param {string} obj.username - The username of the user.
+   * @param {Role} obj.role - The role of the user.
+   * @returns {User|null} The created User instance or null if the object is invalid.
    */
   static fromObject(obj) {
     if (!obj || !obj.firstName || !obj.lastName || !obj.username || !obj.role) {
@@ -71,12 +80,13 @@ class User {
   /**
    * Logs in a user.
    *
-   * @param username The username of the user.
-   * @param password The password of the user, encrypted on the frontend.
-   *
-   * @returns {Promise<User|null>} The user object if the user is found, or null if the user is not found.
-   *
-   * @throws {Error} If an error occurs while validating the user
+   * @async
+   * @static
+   * @function loginUser
+   * @param {string} username - The username of the user.
+   * @param {string} password - The encrypted password of the user from the frontend.
+   * @returns {Promise<User|null>} A promise that resolves to the User instance if found, otherwise null.
+   * @throws {Error} If an error occurs while validating the user.
    */
   static async loginUser(username, password) {
     try {
@@ -94,8 +104,10 @@ class User {
   /**
    * Gets all users.
    *
-   * @returns {Promise<User[]>} The list of all users.
-   *
+   * @async
+   * @static
+   * @function getAll
+   * @returns {Promise<User[]>} A promise that resolves to an array of all User instances.
    * @throws {Error} If an error occurs while getting the users.
    */
   static async getAll() {
@@ -110,10 +122,11 @@ class User {
   /**
    * Gets a user by their username.
    *
-   * @param username The username of the user to get.
-   *
-   * @returns {Promise<User|null>} The user object if the user is found, or null if the user is not found.
-   *
+   * @async
+   * @static
+   * @function withUsername
+   * @param {string} username - The username to search for.
+   * @returns {Promise<User|null>} A promise that resolves to the User instance if found, or null if not.
    * @throws {Error} If an error occurs while getting the user.
    */
   static async withUsername(username) {
@@ -132,9 +145,10 @@ class User {
   /**
    * Updates the role of the user.
    *
-   * @param role The new role of the user.
+   * @async
+   * @function updateRole
+   * @param {Role} role - The new role for the user.
    * @returns {Promise<void>} A promise that resolves when the role is updated.
-   *
    * @throws {Error} If an error occurs while updating the role.
    */
   async updateRole(role) {
@@ -142,9 +156,7 @@ class User {
     try {
       const users = await readAndParseData(usersFile);
       const user = users.find((user) => user.username === this.username);
-
       user.role = role;
-
       await saveUsers(users);
     } catch (err) {
       console.error("Error updating role:", err);
@@ -155,10 +167,10 @@ class User {
   /**
    * Registers a new user.
    *
-   * @param password The password of the user, encrypted on the frontend.
-   *
-   * @returns {Promise<boolean>} True if the user is registered, false if the user already exists or if the user is invalid.
-   *
+   * @async
+   * @function registerUser
+   * @param {string} password - The password of the user, encrypted on the frontend.
+   * @returns {Promise<boolean>} A promise that resolves to true if the user is registered, or false otherwise.
    * @throws {Error} If an error occurs while registering the user.
    */
   async registerUser(password) {
@@ -193,8 +205,9 @@ class User {
   /**
    * Deletes the user.
    *
+   * @async
+   * @function delete
    * @returns {Promise<void>} A promise that resolves when the user is deleted.
-   *
    * @throws {Error} If an error occurs while deleting the user.
    */
   async delete() {
@@ -211,11 +224,13 @@ class User {
 }
 
 /**
- * Save users to the users file.
+ * Saves users to the users file.
  *
- * @param {User[]} users The list of users to save.
- *
+ * @private
+ * @function saveUsers
+ * @param {User[]} users - The array of User instances to be saved.
  * @returns {Promise<void>} A promise that resolves when the users are saved.
+ * @throws {Error} If an error occurs while writing the file.
  */
 async function saveUsers(users) {
   try {

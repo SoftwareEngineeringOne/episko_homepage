@@ -1,5 +1,5 @@
 /**
- * @module loginController
+ * @module controllers/auth/loginController
  * @description Handles user login related requests.
  * 
  * @requires ../../models/user.js

@@ -6,6 +6,7 @@ const templates = [
   { src: "src/views/static/about.pug", dest: "public/about.html" },
   { src: "src/views/static/terms.pug", dest: "public/terms.html" },
   { src: "src/views/static/privacy.pug", dest: "public/privacy.html" },
+  { src: "src/views/static/impressum.pug", dest: "public/impressum.html" },
 ];
 
 templates.forEach((template) => {

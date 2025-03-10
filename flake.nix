@@ -24,6 +24,8 @@
             openssl
             docker-buildx
             crun
+            typst
+            tinymist
           ];
 
           shellHook = ''

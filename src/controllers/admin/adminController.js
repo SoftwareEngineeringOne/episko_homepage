@@ -1,5 +1,5 @@
 /**
- * @module adminController
+ * @module controllers/admin/adminController
  * @description Handles admin-related requests.
  * 
  * @requires ../../models/post.js

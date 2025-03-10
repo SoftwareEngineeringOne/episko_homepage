@@ -7,11 +7,11 @@ block content
     main.post-container
         .post-header
             h1 Latest Posts
-            if session.loggedIn
-                if session.user.role === 'admin' || session.user.role === 'author'
-                    a.button.call-to-action(href="/posts/new") New Post
 
         .flex-grid
             .posts-grid
                 each post in posts
                     include ../components/postPreview.pug
+
+        if session.user && (session.user.role === 'admin' || session.user.role === 'author')
+            a.button.call-to-action(href="/posts/new") New Post

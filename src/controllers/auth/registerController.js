@@ -1,12 +1,12 @@
 /**
- * @module registerController
+ * @module controllers/auth/registerController
  * @description Handles user registration requests.
  * 
  * @requires ../../models/user.js
  * @requires ../../util/controller.js
  */
 import User from "../../models/user.js";
-import { endBadRequest, endResponseText, endSuccess } from "../../util/controller.js";
+import { endBadRequest, endResponseText } from "../../util/controller.js";
 
 /**
  * Register controller object.

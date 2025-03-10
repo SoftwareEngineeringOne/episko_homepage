@@ -1,3 +1,8 @@
+/**
+ * @module public/js/posts
+ * @description Attaches click event listeners to elements with the class "card-clickable".
+ * When a card is clicked (except when directly clicking on an inner anchor), it navigates to the URL defined in its href attribute.
+ */
 document.addEventListener("DOMContentLoaded", function() {
   const cards = document.querySelectorAll('.card-clickable');
 
@@ -11,6 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
       if (href) {
         window.location.href = href;
       }
-    })
-  })
-})
+    });
+  });
+});
