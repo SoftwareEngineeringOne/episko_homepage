@@ -45,7 +45,7 @@
     "content": "12234545trgfg",
     "author": "admin",
     "createdAt": "2025-03-10T09:11:52.119Z",
-    "status": "published"
+    "status": "archived"
   },
   {
     "id": "8f6aabbe701ce2635973287faf27544b14cb3075ad127db2",
@@ -53,6 +53,22 @@
     "content": "Cool stuff",
     "author": "author",
     "createdAt": "2025-03-10T10:28:07.934Z",
+    "status": "published"
+  },
+  {
+    "id": "dba42b0aa6c41dcc724592d77fd26d2ee56053d5a6663047",
+    "title": "Lorem Ipsum",
+    "content": "Lorem Ipsum",
+    "author": "author",
+    "createdAt": "2025-03-10T17:23:24.533Z",
+    "status": "archived"
+  },
+  {
+    "id": "2fe4466b7c1c3b28b6f3dd0189bf8282b8bf1326b5d4335f",
+    "title": "Lorem Ipsum 2",
+    "content": "Lorem Ipsum 2",
+    "author": "author",
+    "createdAt": "2025-03-10T17:58:22.362Z",
     "status": "published"
   }
 ]

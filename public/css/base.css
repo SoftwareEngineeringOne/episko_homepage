@@ -33,6 +33,10 @@ main {
   margin-bottom: 10px;
 }
 
+.flex-start {
+  justify-content: flex-start;
+}
+
 .container {
   display: flex;
   align-items: center;

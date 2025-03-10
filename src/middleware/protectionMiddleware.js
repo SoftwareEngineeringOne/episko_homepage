@@ -32,13 +32,14 @@ export const protectionMiddleware = {
             : "";
           res.redirect("/auth/login" + nextQuery);
         } else {
-          next({ status: 401, message: "Unauthorized" });
+          // next({ status: 401, message: "Unauthorized" });
+          res.status(401).end("Unauthorized")
         }
         return;
       }
 
       if (!allowedRoles.includes(req.session.user.role)) {
-        next({ status: 401, message: "Unauthorized" });
+        next({ status: 403, message: "Forbidden" });
         return;
       }
       next();

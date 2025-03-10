@@ -117,6 +117,7 @@ export const PostController = {
    */
   createPost: async (req, res) => {
     const { title, content } = req.body;
+    if (!title) return endBadRequest();
     try {
       let post = new Post(title, content, req.session.user);
       await post.save();

@@ -18,7 +18,7 @@
     "lastName": "Blum",
     "username": "DefinitelyNotSimon13",
     "password": "e7f9fe7d88d401e2b63533885fb4600b256e428412d26a9bb735672d4d08e63b",
-    "role": "admin"
+    "role": "user"
   },
   {
     "firstName": "author",
@@ -39,7 +39,7 @@
     "lastName": "Stöckle",
     "username": "DosKobold",
     "password": "0357513deb903a056e74a7e475247fc1ffe31d8be4c1d4a31f58dd47ae484100",
-    "role": "admin"
+    "role": "user"
   },
   {
     "firstName": "Ben",
@@ -61,5 +61,19 @@
     "username": "Nutzer",
     "password": "3097525b27a147bf5f95c8f37861c1aa77d5518b3c892aa8446e8784bee54d1f",
     "role": "user"
+  },
+  {
+    "firstName": "Test",
+    "lastName": "Nutzer",
+    "username": "TestNutzer",
+    "password": "532eaabd9574880dbf76b9b8cc00832c20a6ec113d682299550d7a6e0f345e25",
+    "role": "author"
+  },
+  {
+    "firstName": "Test2",
+    "lastName": "Nuter2",
+    "username": "TestNutzer2",
+    "password": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
+    "role": "author"
   }
 ]

@@ -39,6 +39,8 @@ section.hero {
   align-items: center;
   background-image: url("/img/hero_placeholder.jpg");
   background-size: cover;
+  margin-top: 0;
+  padding-top: 0;
 
   .flex-grid {
     color: var(--color-on-accent);
