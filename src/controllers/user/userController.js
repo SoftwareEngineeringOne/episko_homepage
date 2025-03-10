@@ -1,14 +1,19 @@
 /**
  * @module controllers/user/userController
  * @description Contains controller methods for handling user-related requests.
- * 
+ *
  * @requires ../../models/post.js
  * @requires ../../models/user.js
  * @requires ../../util/controller.js
  */
 import Post from "../../models/post.js";
 import User from "../../models/user.js";
-import { endBadRequest, endInternalError, endNotFound, endSuccess } from "../../util/controller.js";
+import {
+  endBadRequest,
+  endInternalError,
+  endNotFound,
+  endSuccess,
+} from "../../util/controller.js";
 
 /**
  * User Controller object.
@@ -33,7 +38,6 @@ export const UserController = {
       const posts = await Post.withAuthor(user);
 
       res.render("user/posts", { posts, user });
-
     } catch (err) {
       next(err);
     }

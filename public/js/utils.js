@@ -3,7 +3,7 @@
  * @description Utility functions for form submission, data manipulation, and navigation.
  */
 
-import { showSnackbarSuccess, showSnackbarError } from './snackbar.js';
+import { showSnackbarSuccess, showSnackbarError } from "./snackbar.js";
 
 /**
  * Adds a submit event listener to a form with the given ID.

@@ -1,7 +1,7 @@
 /**
  * @module controllers/auth/logoutController
  * @description Handles user logout requests.
- * 
+ *
  * @requires ../../util/controller.js
  */
 import { endInternalError, endSuccess } from "../../util/controller.js";

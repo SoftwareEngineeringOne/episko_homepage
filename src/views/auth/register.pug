@@ -1,29 +1,49 @@
 extends ../layout
 
 block scripts
-    script(src="/js/auth/register.js", type="module")
+  script(src="/js/auth/register.js", type="module")
 
 block content
-    .form-container
-        .card
-            h1.text-center.mt-md Create Account
-            form#register-form(action="/auth/register", method="POST")
-                .form-group.double
-                    .form-input
-                        label(for="first-name") First Name
-                        input#first-name.w-80(type="text", name="firstName", placeholder = "First Name", required)
-                    .form-input
-                        label(for="last-name") Last Name
-                        input#last-name.w-80(type="text", name="lastName", placeholder = "Last Name" required)
-                .form-group
-                    .form-input
-                        label(for="username") Username
-                        input#username(type="text", name="username", placeholder = "Username", required)
-                .form-group
-                    .form-input
-                        label(for="password") Password
-                        input#password(type="password", name="password", placeholder = "Password", required)
-                button.button(type="submit") Register
-            div
-                span Already have an account?&nbsp;
-                a(href=`/auth/login?next=${encodeURIComponent(originalUrl)}`) Login
+  .form-container
+    .card
+      h1.text-center.mt-md Create Account
+      form#register-form(action="/auth/register", method="POST")
+        .form-group.double
+          .form-input
+            label(for="first-name") First Name
+            input#first-name.w-80(
+              type="text",
+              name="firstName",
+              placeholder="First Name",
+              required
+            )
+          .form-input
+            label(for="last-name") Last Name
+            input#last-name.w-80(
+              type="text",
+              name="lastName",
+              placeholder="Last Name",
+              required
+            )
+        .form-group
+          .form-input
+            label(for="username") Username
+            input#username(
+              type="text",
+              name="username",
+              placeholder="Username",
+              required
+            )
+        .form-group
+          .form-input
+            label(for="password") Password
+            input#password(
+              type="password",
+              name="password",
+              placeholder="Password",
+              required
+            )
+        button.button(type="submit") Register
+      div
+        span Already have an account?&nbsp;
+        a(href=`/auth/login?next=${encodeURIComponent(originalUrl)}`) Login

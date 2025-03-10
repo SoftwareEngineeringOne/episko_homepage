@@ -31,5 +31,5 @@ export async function readAndParseData(file, map = null) {
  */
 export async function findEntryInData(file, lambda) {
   const entries = await readAndParseData(file);
-  return entries.find(lambda)
+  return entries.find(lambda);
 }

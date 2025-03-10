@@ -1,7 +1,7 @@
 /**
  * @module routes/admin
  * @description Express router providing API endpoints for administrative tasks.
- * 
+ *
  * @requires express
  * @requires ../controllers/admin/adminController
  * @requires ../controllers/user/userController

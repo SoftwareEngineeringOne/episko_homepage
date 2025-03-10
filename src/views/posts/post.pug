@@ -21,7 +21,7 @@ block content
           span= post.createdAt.toLocaleDateString()
 
       .post-actions
-          if session.user && ( session.user.role === 'admin' || (session.user.role === 'author' && session.user.username === post.author))
-            .container
-              a.button(href=`/posts/${post.id}/edit`) Edit Post
-              a.button(href=`/posts/${post.id}/edit`) Delete Post
+        if session.user && ( session.user.role === 'admin' || (session.user.role === 'author' && session.user.username === post.author))
+          .container
+            a.button(href=`/posts/${post.id}/edit`) Edit Post
+            a.button(href=`/posts/${post.id}/edit`) Delete Post

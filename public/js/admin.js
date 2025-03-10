@@ -50,7 +50,7 @@ addSubmitListener("new-user-form", async (event) => {
       showSnackbarSuccess("User created successfully");
       window.location.reload();
     } else {
-      const text = await response.text() || "";
+      const text = (await response.text()) || "";
       showSnackbarError(`An error occured: ${text}`);
     }
   } catch (err) {
@@ -75,7 +75,7 @@ function deleteUser(username) {
         showSnackbarSuccess("User deleted successfully");
         window.location.reload();
       } else {
-        const text = await response.text() || "Unknown error";
+        const text = (await response.text()) || "Unknown error";
         showSnackbarError(`An error occured: ${text}`);
       }
     })
@@ -101,7 +101,7 @@ function deletePost(postId) {
         showSnackbarSuccess("Post deleted successfully");
         window.location.reload();
       } else {
-        const text = await response.text() || "Unknown error";
+        const text = (await response.text()) || "Unknown error";
         showSnackbarError(`An error occured: ${text}`);
       }
     })
@@ -125,7 +125,7 @@ function approvePost(postId) {
         showSnackbarSuccess("Post approved successfully");
         window.location.reload();
       } else {
-        const text = await response.text() || "Unknown error";
+        const text = (await response.text()) || "Unknown error";
         showSnackbarError(`An error occured: ${text}`);
       }
     })
@@ -149,7 +149,7 @@ function archivePost(postId) {
         showSnackbarSuccess("Post archived successfully");
         window.location.reload();
       } else {
-        const text = await response.text() || "Unknown error";
+        const text = (await response.text()) || "Unknown error";
         showSnackbarError(`An error occured: ${text}`);
       }
     })

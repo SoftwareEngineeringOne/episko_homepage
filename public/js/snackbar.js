@@ -19,9 +19,9 @@ export function showSnackbar(message, type) {
   if (!snackbar) return;
 
   snackbarText.textContent = message;
-  if (type === 'success') {
+  if (type === "success") {
     snackbar.classList.add("snackbar-success");
-  } else if (type === 'error') {
+  } else if (type === "error") {
     snackbar.classList.add("snackbar-error");
   }
   snackbar.classList.add("show");
@@ -53,7 +53,7 @@ export function showSnackbar(message, type) {
  * @returns {void}
  */
 export function showSnackbarSuccess(message) {
-  showSnackbar(message, 'success');
+  showSnackbar(message, "success");
 }
 
 /**
@@ -64,7 +64,7 @@ export function showSnackbarSuccess(message) {
  */
 export function showSnackbarError(message) {
   console.log("showing snackbar");
-  showSnackbar(message, 'error');
+  showSnackbar(message, "error");
 }
 
 // Expose the snackbar functions to the global scope.

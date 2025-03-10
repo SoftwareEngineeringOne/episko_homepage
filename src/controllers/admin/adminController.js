@@ -1,7 +1,7 @@
 /**
  * @module controllers/admin/adminController
  * @description Handles admin-related requests.
- * 
+ *
  * @requires ../../models/post.js
  * @requires ../../models/user.js
  */
@@ -30,7 +30,7 @@ export const AdminController = {
       res.render("admin/dashboard", { posts, users });
     } catch (err) {
       console.error(err);
-      next(err)
+      next(err);
     }
   },
 };

@@ -13,7 +13,7 @@ block content
 
       form#post-form(
         method="POST",
-        action=existing_post ? `/posts/${existing_post.id}`: "/posts"
+        action=existing_post ? `/posts/${existing_post.id}` : "/posts"
       )
         .form-group
           .form-input
@@ -23,7 +23,7 @@ block content
               type="text",
               placeholer="Title",
               required,
-              value=existing_post ? existing_post.title: ""
+              value=existing_post ? existing_post.title : ""
             )
         .form-group.form-group-area
           label.area-label(for="content") Content

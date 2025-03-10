@@ -18,16 +18,18 @@ export const protectionMiddleware = {
    * Returns an Express middleware function that restricts access based on allowed roles.
    *
    * @function roleRequired
-   * 
+   *
    * @param {Array<Role>} allowedRoles - An array of roles permitted to access the route.
-   * 
+   *
    * @returns {function(Request, Response, NextFunction): void} Middleware function that checks the user's role.
    */
   roleRequired: (allowedRoles) => {
     return (req, res, next) => {
       if (!req.session.user) {
         if (req.method === "GET") {
-          const nextQuery = req.originalUrl ? `?next=${encodeURIComponent(req.originalUrl)}` : "";
+          const nextQuery = req.originalUrl
+            ? `?next=${encodeURIComponent(req.originalUrl)}`
+            : "";
           res.redirect("/auth/login" + nextQuery);
         } else {
           next({ status: 401, message: "Unauthorized" });

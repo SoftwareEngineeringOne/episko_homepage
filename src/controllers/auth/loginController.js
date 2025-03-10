@@ -1,12 +1,16 @@
 /**
  * @module controllers/auth/loginController
  * @description Handles user login related requests.
- * 
+ *
  * @requires ../../models/user.js
  * @requires ../../util/controller.js
  */
 import User from "../../models/user.js";
-import { endBadRequest, endInternalError, endSuccess } from "../../util/controller.js";
+import {
+  endBadRequest,
+  endInternalError,
+  endSuccess,
+} from "../../util/controller.js";
 
 /**
  * Login Controller object.

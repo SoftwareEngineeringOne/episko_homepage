@@ -1,7 +1,7 @@
 /**
  * @module models/user
  * @description Model representing users in the application.
- * 
+ *
  * @requires node:fs/promises
  * @requires node:path
  * @requires ../util/data.js

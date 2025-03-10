@@ -1,7 +1,7 @@
 /**
  * @module routes/auth
  * @description Express router providing API endpoints for authentication tasks.
- * 
+ *
  * @requires express
  * @requires ../controllers/auth/registerController
  * @requires ../controllers/auth/loginController
@@ -17,11 +17,11 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
   if (req.session.user) {
-    res.redirect(`/user/${req.session.user.username}`)
+    res.redirect(`/user/${req.session.user.username}`);
   } else {
-    res.redirect(`/auth/login?next=${encodeURIComponent("/posts")}`)
+    res.redirect(`/auth/login?next=${encodeURIComponent("/posts")}`);
   }
-})
+});
 
 /**
  * @route GET /login

@@ -1,17 +1,17 @@
 extends ../layout
 
 block scripts
-    script(src="/js/posts.js", type="module")
+  script(src="/js/posts.js", type="module")
 
 block content
-    main.post-container
-        .post-header
-            h1.fg-accent Latest Posts
+  main.post-container
+    .post-header
+      h1.fg-accent Latest Posts
 
-        .flex-grid
-            .posts-grid
-                each post in posts
-                    include ../components/postPreview.pug
+    .flex-grid
+      .posts-grid
+        each post in posts
+          include ../components/postPreview.pug
 
-        if session.user && (session.user.role === 'admin' || session.user.role === 'author')
-            a.button.call-to-action(href="/posts/new") New Post
+    if session.user && (session.user.role === 'admin' || session.user.role === 'author')
+      a.button.call-to-action(href="/posts/new") New Post

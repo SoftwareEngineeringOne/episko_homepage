@@ -10,11 +10,11 @@
  * Express middleware function to set Pug template locals.
  *
  * @function pugMiddleware
- * 
+ *
  * @param {Request} req - Express request object.
  * @param {Response} res - Express response object.
  * @param {NextFunction} next - Express next middleware function.
- * 
+ *
  * @returns {void}
  */
 export const pugMiddleware = (req, res, next) => {

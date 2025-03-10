@@ -51,6 +51,6 @@ export function endNotFound(res, message = "Not Found") {
  * @param {string} [message=""] - The response message.
  */
 export function endResponseText(res, code, message = "") {
-  res.writeHead(code, { "ContentType": "text/plain" });
+  res.writeHead(code, { ContentType: "text/plain" });
   res.end(message);
 }

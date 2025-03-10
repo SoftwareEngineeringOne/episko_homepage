@@ -10,11 +10,11 @@
  * Logs an informational message with the current timestamp, request URL, and HTTP method.
  *
  * @function consoleLogger
- * 
+ *
  * @param {Request} req - Express request object.
  * @param {Response} _res - Express response object (unused).
  * @param {NextFunction} next - Express next middleware function.
- * 
+ *
  * @returns {void}
  */
 export const consoleLogger = (req, _res, next) => {

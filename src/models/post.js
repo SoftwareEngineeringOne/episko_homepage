@@ -1,7 +1,7 @@
 /**
  * @module models/post
  * @description Model representing blog posts.
- * 
+ *
  * @requires node:fs/promises
  * @requires node:crypto
  * @requires node:path
@@ -17,7 +17,7 @@ import { findEntryInData, readAndParseData } from "../util/data.js";
 
 const postsFile = path.join(process.cwd(), "data", "posts.json");
 
-/** 
+/**
  * @typedef {string} Status
  */
 
@@ -91,7 +91,7 @@ class Post {
    * @param {string} obj.author - The author's username.
    * @param {string} obj.createdAt - The creation date in string format.
    * @param {Status} obj.status - The status of the post.
-   * 
+   *
    * @returns {Post|null} The Post instance or null if invalid.
    */
   static fromObject(obj) {
@@ -118,7 +118,7 @@ class Post {
    * Retrieves all posts.
    *
    * @returns {Promise<Post[]>} A promise resolving to an array of Post instances.
-   * 
+   *
    * @throws {Error} If an error occurs while reading the file.
    */
   static async getAll() {
@@ -134,7 +134,7 @@ class Post {
    * Retrieves all public posts.
    *
    * @returns {Promise<Post[]>} A promise resolving to an array of published Post instances.
-   * 
+   *
    * @throws {Error} If an error occurs while reading the file.
    */
   static async getPublic() {
@@ -153,9 +153,9 @@ class Post {
    * Retrieves a post by its id.
    *
    * @param {string} id - The id of the post.
-   * 
+   *
    * @returns {Promise<Post|null>} A promise resolving to the Post instance if found, otherwise null.
-   * 
+   *
    * @throws {Error} If an error occurs during retrieval.
    */
   static async withId(id) {
@@ -172,9 +172,9 @@ class Post {
    * Retrieves all posts by an author.
    *
    * @param {string} author - The author's username.
-   * 
+   *
    * @returns {Promise<Post[]>} A promise resolving to an array of Post instances by the author.
-   * 
+   *
    * @throws {Error} If an error occurs during retrieval.
    */
   static async withAuthor(author) {
@@ -193,7 +193,7 @@ class Post {
    * Saves the current post.
    *
    * @returns {Promise<void>} A promise that resolves when the post is saved.
-   * 
+   *
    * @throws {Error} If an error occurs during the save operation.
    */
   async save() {
@@ -212,9 +212,9 @@ class Post {
    *
    * @param {string} title - The new title.
    * @param {string} content - The new content.
-   * 
+   *
    * @returns {Promise<void>} A promise that resolves when the update is complete.
-   * 
+   *
    * @throws {Error} If an error occurs during the update.
    */
   async update(title, content) {
@@ -236,9 +236,9 @@ class Post {
    * Changes the status of the post.
    *
    * @param {Status} status - The new status for the post.
-   * 
+   *
    * @returns {Promise<void>} A promise that resolves when the status is changed.
-   * 
+   *
    * @throws {Error} If an error occurs during the status change.
    */
   async changeStatus(status) {
@@ -258,7 +258,7 @@ class Post {
    * Deletes the post.
    *
    * @returns {Promise<void>} A promise that resolves when the post is deleted.
-   * 
+   *
    * @throws {Error} If an error occurs during deletion.
    */
   async delete() {
@@ -278,11 +278,11 @@ class Post {
  * Saves posts to the data file.
  *
  * @private
- * 
+ *
  * @param {Post[]} posts - An array of Post instances to be saved.
- * 
+ *
  * @returns {Promise<void>} A promise that resolves when posts are written.
- * 
+ *
  * @throws {Error} If an error occurs while writing to the file.
  */
 async function savePosts(posts) {

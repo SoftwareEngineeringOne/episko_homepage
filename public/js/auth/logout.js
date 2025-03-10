@@ -22,7 +22,6 @@ async function logout() {
   } else {
     console.error("Failed to log out");
     showSnackbarError("Failed to log out!");
-
   }
 }
 

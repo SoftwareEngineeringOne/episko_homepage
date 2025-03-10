@@ -138,7 +138,6 @@ a:hover {
 
 .card-clickable {
   cursor: pointer;
-
 }
 
 .card-clickable:hover {
@@ -222,8 +221,6 @@ form {
       transform: translateY(-100%);
     }
   }
-
-
 }
 
 input:focus,

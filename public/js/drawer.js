@@ -3,7 +3,7 @@
  * @description Provides functionality for the site's navigation drawer,
  * including opening and closing the drawer when interacting with the menu toggle, close button, and overlay.
  */
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById("menu-toggle");
   const drawer = document.getElementById("drawer");
   const closeBtn = drawer.querySelector(".close");
@@ -32,5 +32,4 @@ document.addEventListener("DOMContentLoaded", function() {
   menuToggle.addEventListener("click", openDrawer);
   closeBtn.addEventListener("click", closeDrawer);
   overlay.addEventListener("click", closeDrawer);
-
 });

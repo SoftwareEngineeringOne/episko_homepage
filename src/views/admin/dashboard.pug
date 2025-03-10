@@ -1,86 +1,119 @@
 extends ../layout
 
 block scripts
-    script(src="/js/admin.js", type="module")
+  script(src="/js/admin.js", type="module")
 
 block content
-    .size-warning
-        h2 Warning! This page should not be used on a smartphone screen.
-        p Please open this page on a larger device!
-    .large-only
-        h1 Users
-        form#new-user-form(action="/auth/register", method="POST")
-        table
-            thead
-                tr
-                    th First Name
-                    th Last Name
-                    th Username
-                    th Role
-                    th -
-                    th Actions
-            tbody
-                each user in users
-                    tr
-                        td= user.firstName
-                        td= user.lastName
-                        td= user.username
-                        td= user.role
-                        td
-                            form.change-role-form(action=`/admin/users/${user.username}/role`, method="POST")
-                                select(name="role", id="roles")
-                                    option(value="user", selected= user.role == 'user') User
-                                    option(value="author", selected= user.role == 'author') Author
-                                    option(value="admin", selected= user.role == 'admin') Admin
-                                button.text-button.underline(type="submit") Apply
-                        td
-                            .container
-                                a.text-button.underline(href=`/user/${user.username}`) View
-                                button.text-button.underline(onclick=`deleteUser('${user.username}')`) Delete
+  .size-warning
+    h2 Warning! This page should not be used on a smartphone screen.
+    p Please open this page on a larger device!
+  .large-only
+    h1 Users
+    form#new-user-form(action="/auth/register", method="POST")
+    table
+      thead
+        tr
+          th First Name
+          th Last Name
+          th Username
+          th Role
+          th -
+          th Actions
+      tbody
+        each user in users
+          tr
+            td= user.firstName
+            td= user.lastName
+            td= user.username
+            td= user.role
+            td
+              form.change-role-form(
+                action=`/admin/users/${user.username}/role`,
+                method="POST"
+              )
+                select#roles(name="role")
+                  option(value="user", selected=user.role == "user") User
+                  option(value="author", selected=user.role == "author") Author
+                  option(value="admin", selected=user.role == "admin") Admin
+                button.text-button.underline(type="submit") Apply
+            td
+              .container
+                a.text-button.underline(href=`/user/${user.username}`) View
+                button.text-button.underline(
+                  onclick=`deleteUser('${user.username}')`
+                ) Delete
 
-                tr
+        tr
 
-                tr
-                    td
-                        input#first-name.w-80(form="new-user-form", type="text", name="firstName", placeholder = "First Name", required)
-                    td
-                        input#last-name.w-80(form="new-user-form", type="text", name="lastName", placeholder = "Last Name" required)
-                    td
-                        input#username(form="new-user-form", type="text", name="username", placeholder = "Username", required)
-                    td
-                        input#password(form="new-user-form", type="password", name="password", placeholder = "Password", required)
-                    td
-                        select(form="new-user-form", name="role", id="roles")
-                            option(value="user", selected= true) User
-                            option(value="author") Author
-                            option(value="admin") Admin
-                    td
-                        button.text-button(form="new-user-form", type="submit") Create
+        tr
+          td
+            input#first-name.w-80(
+              form="new-user-form",
+              type="text",
+              name="firstName",
+              placeholder="First Name",
+              required
+            )
+          td
+            input#last-name.w-80(
+              form="new-user-form",
+              type="text",
+              name="lastName",
+              placeholder="Last Name",
+              required
+            )
+          td
+            input#username(
+              form="new-user-form",
+              type="text",
+              name="username",
+              placeholder="Username",
+              required
+            )
+          td
+            input#password(
+              form="new-user-form",
+              type="password",
+              name="password",
+              placeholder="Password",
+              required
+            )
+          td
+            select#roles(form="new-user-form", name="role")
+              option(value="user", selected) User
+              option(value="author") Author
+              option(value="admin") Admin
+          td
+            button.text-button(form="new-user-form", type="submit") Create
 
+    hr
 
-
-        hr
-            
-        h1 Posts
-        table
-            thead
-                tr
-                    th Title
-                    th Author
-                    th Status
-                    th Actions
-            tbody
-                each post in posts
-                    tr
-                        td= post.title
-                        td= post.author
-                        td= post.status
-                        td
-                            .container
-                                a.text-button.underline(href=`/posts/${post.id}/read`) View
-                                a.text-button.underline(href=`/posts/${post.id}/edit`) Edit
-                                button.text-button.underline(onclick=`deletePost('${post.id}')`) Delete
-                                if post.status !== 'published'
-                                    button.text-button.underline(onclick=`approvePost('${post.id}')`) Publish
-                                if post.status === 'published'
-                                    button.text-button.underline(onclick=`archivePost('${post.id}')`) Archive
+    h1 Posts
+    table
+      thead
+        tr
+          th Title
+          th Author
+          th Status
+          th Actions
+      tbody
+        each post in posts
+          tr
+            td= post.title
+            td= post.author
+            td= post.status
+            td
+              .container
+                a.text-button.underline(href=`/posts/${post.id}/read`) View
+                a.text-button.underline(href=`/posts/${post.id}/edit`) Edit
+                button.text-button.underline(
+                  onclick=`deletePost('${post.id}')`
+                ) Delete
+                if post.status !== 'published'
+                  button.text-button.underline(
+                    onclick=`approvePost('${post.id}')`
+                  ) Publish
+                if post.status === 'published'
+                  button.text-button.underline(
+                    onclick=`archivePost('${post.id}')`
+                  ) Archive

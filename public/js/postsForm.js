@@ -4,7 +4,7 @@
  */
 
 import { addSubmitListener, sendFormAsJson } from "./utils.js";
-import { showSnackbarSuccess, showSnackbarError } from './snackbar.js';
+import { showSnackbarSuccess, showSnackbarError } from "./snackbar.js";
 
 /**
  * Callback for handling the post form submission.

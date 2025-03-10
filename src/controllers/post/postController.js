@@ -1,7 +1,7 @@
 /**
  * @module controllers/post/postController
  * @description Contains controller methods for handling post-related requests.
- * 
+ *
  * @requires ../../models/post.js
  * @requires ../../models/user.js
  * @requires ../../util/controller.js

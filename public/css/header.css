@@ -39,7 +39,7 @@ nav {
   }
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
   .logo-full {
     display: none;
   }
@@ -124,7 +124,7 @@ nav {
   }
 }
 
-@media(min-width: 601px) {
+@media (min-width: 601px) {
   .logo-small {
     display: none;
   }
@@ -140,5 +140,4 @@ nav {
   #menu-toggle {
     display: none;
   }
-
 }

@@ -1,52 +1,54 @@
-- var session = typeof session !== 'undefined' ? session : {};
-- var originalUrl = typeof originalUrl !== 'undefinied' ? originalUrl : '/';
+- var session = typeof session !== "undefined" ? session : {};
+- var originalUrl = typeof originalUrl !== "undefinied" ? originalUrl : "/";
 
 head
-    script(src="/js/auth/logout.js", type="module")
-    script(src="/js/navbar.js", type="module")
-    script(src="/js/drawer.js", type="module")
+  script(src="/js/auth/logout.js", type="module")
+  script(src="/js/navbar.js", type="module")
+  script(src="/js/drawer.js", type="module")
 
 nav
-    .navbar
-        .logo.logo-full(onclick="location.href='/'")
-            img(src="/img/logo_full_transparent.png")
-        .logo.logo-small(onclick="location.href='/'")
-            img(src="/img/logo_small_transparent.png")
-        .nav-links
-            a(href="/") Home
-            a(href="/about") About
-            a(href="/posts") Posts
-            if session.user 
-                if session.user.role == 'admin'
-                    a(href="/admin") Admin
+  .navbar
+    .logo.logo-full(onclick="location.href='/'")
+      img(src="/img/logo_full_transparent.png")
+    .logo.logo-small(onclick="location.href='/'")
+      img(src="/img/logo_small_transparent.png")
+    .nav-links
+      a(href="/") Home
+      a(href="/about") About
+      a(href="/posts") Posts
+      if session.user
+        if session.user.role == 'admin'
+          a(href="/admin") Admin
 
-                a.logout-link Logout
+        a.logout-link Logout
 
-            a.button.call-to-action(
-target="_blank", rel="noopener noreferrer",
-                href="https://github.com/SoftwareEngineeringOne/episko/releases/latest"
-            ) Get Started
+      a.button.call-to-action(
+        target="_blank",
+        rel="noopener noreferrer",
+        href="https://github.com/SoftwareEngineeringOne/episko/releases/latest"
+      ) Get Started
 
-        button#menu-toggle(type="button") &#9776;
+    button#menu-toggle(type="button") &#9776;
 
-        aside#drawer.drawer
-            a.close(href="javascript:void(0)") &times;
-            ul
-                li: a(href="/") Home
-                li: a(href="/about") About
-                li: a(href="/posts") Posts
+    aside#drawer.drawer
+      a.close(href="javascript:void(0)") &times;
+      ul
+        li: a(href="/") Home
+        li: a(href="/about") About
+        li: a(href="/posts") Posts
 
-                if session.user 
-                    if session.user.role == 'admin'
-                        li: a(href="/admin") Admin Panel
+        if session.user
+          if session.user.role == 'admin'
+            li: a(href="/admin") Admin Panel
 
-                    li: a(href=`/profile/${session.user.username}`) Profile
-                    li: a.logout-link Logout
+          li: a(href=`/profile/${session.user.username}`) Profile
+          li: a.logout-link Logout
 
-                .cta-drawer
-                    a.button.call-to-action(
-        target="_blank", rel="noopener noreferrer",
-                        href="https://github.com/SoftwareEngineeringOne/episko/releases/latest"
-                    ) Get Started
+        .cta-drawer
+          a.button.call-to-action(
+            target="_blank",
+            rel="noopener noreferrer",
+            href="https://github.com/SoftwareEngineeringOne/episko/releases/latest"
+          ) Get Started
 
-        div#overlay
+    #overlay

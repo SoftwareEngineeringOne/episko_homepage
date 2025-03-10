@@ -31,7 +31,9 @@ app.use(consoleLogger);
 if (process.env.NODE_ENV == "production") {
   console.log("WARNING: Running in production mode");
   console.log("Express session is not setup for production");
-  console.log("\t The default memory store will leak memory and will not scale");
+  console.log(
+    "\t The default memory store will leak memory and will not scale",
+  );
   console.log("\t Please configure a session store such as redis");
   console.log("\t Furthermore no secure secrets are configured for production");
 

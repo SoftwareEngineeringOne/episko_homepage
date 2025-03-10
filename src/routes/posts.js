@@ -2,7 +2,7 @@
  * @module routes/posts
  * @description Routes for managing blog posts.
  * This module defines endpoints to display, create, update, delete, publish, and archive posts.
- * 
+ *
  * @requires express
  * @requires ../controllers/post/postController
  * @requires ../models/user
