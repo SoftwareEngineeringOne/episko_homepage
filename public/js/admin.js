@@ -16,7 +16,6 @@ import { showSnackbarError, showSnackbarSuccess } from "./snackbar.js";
 
 /**
  * Handles role change requests for users.
- * @event module:admin~roleChangeSubmit
  * @param {Event} event - The submit event from the role change form.
  */
 for (const form of document.getElementsByClassName("change-role-form")) {
@@ -38,7 +37,6 @@ for (const form of document.getElementsByClassName("change-role-form")) {
 
 /**
  * Handles new user creation.
- * @event module:admin~newUserSubmit
  * @param {Event} event - The submit event from the new user form.
  */
 addSubmitListener("new-user-form", async (event) => {
