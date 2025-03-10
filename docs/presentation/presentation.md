@@ -1,71 +1,100 @@
 # Notizen Präsentation
 
-## Ablauf - Entlang Inhalt
-1. Homepage
-    - Auf Dekstop
-    - Auf Mobile (Navigation Drawer)
+## Einleitung
+### Ablauf
+- Inhaltgesteuert -> Seite durchgehen und auf verschieden Aspekte eingehen
 
-2. Static Pages
-    - nginx or node depending on env
-
-3. Sessions
-    - Session Cookies (express Session)
-
-4. Users
-    - Login/Register
-
-5. Posts
-    - See/Read
-    - Create
-
-6. Admin
-
-7. Deployment
+| Punkt                        | Zeit | Wer?  |
+| ---------------------------- | ---- | ----- |
+| 1. Homepage                  |      |       |
+| 2. Statische Seiten          |      |       |
+| 3. User & Session Management |      | Simon |
+| 4. Beiträge/Posts            |      |       |
+| 5. Admin Dashboard           |      |       |
+| 6. Deployment                |      |       |
 
 ## Homepage
-- Auf Desktop zeigen
-- Auf Mobil zeigen
-- Nutzung von Pug als Template Engine
+- Thema der Webseite
+    - "Produktseite" für Projekt aus Software Engineering
+    - Verwaltung und Übersicht von Software Projekten
+    - Von alt griechischen Wort episkopos, heißt c.a. "Aufseher"
+- Verwendete Technologien
+    - JavaScript
+        - node runtime für Server
+        - express als Mini-Framework
+        - express-session für einfaches Session Management
+    - HTML/CSS
+        - Pug als Template Engine
+    - nginx als Webserver
 
-- Pug code zeigen
-    - layout.pug
-    - index.pug
-    - components (header/footer)
+[!WEBSEITE 1: Homepage auf Desktop]
+[!WEBSEITE 2: Homepage auf Mobil (Navigation Drawer)]
+
+[!CODE 1: layout.pug + index.pug]
+- Aufteilung dank Pug
+- Layout, Header, Footer, Snackbar überall gleich
+
+## Snackbar
+[!WEBSEITE 3: Snackbar (Webkonsole)]
+- Snackbar aufrufbar von Client-Side JS
+- Verbesserung UX, Feedback bei z.B. Fehlern
+[!CODE 2: public/js/snackbar.js]
 
 ## Statische Seiten
-- About, Terms...
-- Compilen von templates vorher
-- nginx für statische Dateien
-    - node in dev
-- Diagramm aufbau
+[!WEBSEITE 4: About]
+- About genau wie Homepage statische Seite
+- Statische Seiten werden über GitHub Actions vor Start der Anwendung zu html Dateien kompiliert
+    - (natürlich auch manuell mit Befehl `npm run static` möglich)
+    - nginx kann diese direkt bereitstellen, node nicht benötigt
 
-## Session
-- Verwendung von express-session
-- Diagramm Middleware
+[!CODE 3: app.js + router/static.js]
+- Für Entwicklungsumgebung kann auch node bereitstellen
 
-## Users
-- Nur "Background"
-- Registration zeigen
-    - auth controller
-    - middleware
-    - json als Datenspeicherung
+## Users & Session Management
+- Session mithilfe von express-session gemanaged
+    - benutzt cookie
+    - lokaler Session Store
+    - Achtung! Nicht "Production Ready"
+        - Leakt Memory
+        - Begrenzt auf 1 Prozess
 
-- Hier Model-View-Controller beispielhaft belegen
+[!WEBSEITE 5: Nutzer einloggen]
+--> (Vorher auf Posts seite)
+
+- Diagramm in Präsentation!
+- Model-View-Controller
+[!CODE 4: models/user.js + controllers/auth/loginController.js]
 
 ## Posts
-- Anschauen/Erstellen
-    1. Alle anzeigen
-    2. Von einem Autor anzeigen
-    3. Neuen erstellen
-- CodeEinblick
-    - ProtectionMiddleware
-    - PostController
-    - postModel
-- Hier voller Ablauf reguest Diagramm
+[!WEBSEITE 6: Post Seiten (Alle, Autor, Einer)]
+[!WEBSEITE 7: Post Erstellen]
+- Nur Autor, Post wird nicht angezeigt! (trotzdem auf Posts Seite gehen zum zeigen) -> Auf später verweisen
+
+- Sequenzdiagramm in Präsentation!
+[!CODE 5: protectionMiddleware.js + routes/posts.js]
+[!CODE 6: controllers/postController.js + models/post.js + posts.json]
 
 ## Admin
-- Nur kurz zeigen, nicht optimiert
+[!WEBSEITE 8: Admin Dashboard]
+- Funktionalität über Aussehen (nur für Administratoren zugänglich)
+- Nutzerverwaltung
+[!WEBSEITE 9: Nutzer erstellen]
+- Post Verwaltung
+[!WEBSEITE 10: Post von vorher veröffentlichen + zeigen]
 
 ## Deployment
-- nginx/docker config
-- https/ssl
+- Entwicklungsumgebung
+    - Bereits gezeigt nur mit node möglich
+- "Produktionsumgebung"
+[!CODE 7: nginx/episko.conf]
+- Aspekte nennen:
+    - https/ssl (kein "richtiges" Zertifikat)
+    - Automatische Weiterleitung http -> https
+    - Statische Dateien kurz wieder erwähnen
+
+[!CODE 8: docker-compose.yml]
+- docker compose für einfaches deployment
+    - nutzt gebautes docker image von nodejs Anwendung
+    - automatische Verknüpfungen für Zertifikate, Statische Dateien und nginx Config
+
+[!WEBSEITE 11: Bereitstellung über `sudo docker-compose up`]
