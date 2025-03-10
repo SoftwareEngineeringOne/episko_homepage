@@ -1,62 +1,36 @@
+/**
+ * @module adminController
+ * @description Handles admin-related requests.
+ * 
+ * @requires ../../models/post.js
+ * @requires ../../models/user.js
+ */
 import Post from "../../models/post.js";
 import User from "../../models/user.js";
 
-export const adminController = {
-  displayAdminDashboard: async (req, res) => {
-    const posts = await Post.getAll();
-    const users = await User.getAll();
-    res.render("admin/dashboard", { posts, users });
-  },
-
-  updateUserRole: async (req, res) => {
+/**
+ * Admin controller object.
+ * @typedef {Object} AdminController
+ * @property {function(Request, Response, NextFunction): Promise<void>} displayAdminDashboard - Renders the admin dashboard.
+ */
+export const AdminController = {
+  /**
+   * Renders the admin dashboard by fetching all posts and users.
+   * @async
+   * @function displayAdminDashboard
+   * @param {Request} _req - The request object (unused).
+   * @param {Response} res - The response object.
+   * @param {NextFunction} next - The next function.
+   * @returns {Promise<void>}
+   */
+  displayAdminDashboard: async (_req, res, next) => {
     try {
-      if (!req.params.username) {
-        res.writeHead(400, { "Content-Type": "text/plain" });
-        res.end("Bad Request");
-        return;
-      }
-
-      const { role } = req.body;
-      console.log("Role: ", role);
-
-      const user = await User.withUsername(req.params.username);
-      await user.updateRole(role);
-
-      res.writeHead(200, { "Content-Type": "text/plain" });
-      res.end();
-    } catch (err) {
-      console.error("Error updating user role: ", err);
-      res.writeHead(500, { "Content-Type": "text/plain" });
-      res.end("Internal Server Error");
-    }
-
-    res.end();
-  },
-
-  deleteUser: async (req, res) => {
-    if (!req.params.username) {
-      res.writeHead(400, { "Content-Type": "text/plain" });
-      res.end("Bad Request");
-      return;
-    }
-
-    const user = await User.withUsername(req.params.username);
-    if (!user) {
-      res.writeHead(404, { "Content-Type": "text/plain" });
-      res.end("User not found");
-      return;
-    }
-
-    try {
-      await user.delete();
-      res.writeHead(200, { "Content-Type": "text/plain" });
-      res.end("User deleted successfully");
+      const posts = await Post.getAll();
+      const users = await User.getAll();
+      res.render("admin/dashboard", { posts, users });
     } catch (err) {
       console.error(err);
-      res.writeHead(500, { "Content-Type": "text/plain" });
-      res.end("Internal Server Error");
+      next(err)
     }
-
-    res.end();
   },
 };

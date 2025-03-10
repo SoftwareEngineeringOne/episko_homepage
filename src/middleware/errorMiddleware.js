@@ -11,11 +11,16 @@ export function errorHandler(err, req, res, next) {
   const statusCode = err.status || 500;
   console.error("Status:", err.status);
 
-  res.status(statusCode).render("error", {
-    title: "Error",
-    message: err.message,
-    error: process.env.NODE_ENV === "development" ? err : {},
-  });
+  if (req.method == 'GET') {
+
+    res.status(statusCode).render("error", {
+      title: "Error",
+      message: err.message,
+      error: process.env.NODE_ENV === "development" ? err : {},
+    });
+  } else {
+    res.status(statusCode).end(err.message);
+  }
 }
 
 /**
