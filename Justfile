@@ -27,3 +27,6 @@ code_8:
 
 docker:
     sudo docker-compose up | wl-copy
+
+snackbar:
+    echo 'showSnackbarError("An unexpected error occured")' | wl-copy

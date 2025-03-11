@@ -4,7 +4,7 @@
  */
 import { showSnackbarError } from "./snackbar.js";
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   /**
    * Handles logout link click event.
    * Prevents the default behavior, sends a POST request to log out, and redirects the user
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
    */
   document
     .querySelector(".logout-link")
-    .addEventListener("click", async (event) => {
+    ?.addEventListener("click", async (event) => {
       event.preventDefault();
       const response = await fetch("/auth/logout", {
         method: "POST",
