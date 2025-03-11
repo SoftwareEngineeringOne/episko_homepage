@@ -11,7 +11,7 @@
     "lastName": "Blum",
     "username": "DefinitelyNotSimon13",
     "password": "e7f9fe7d88d401e2b63533885fb4600b256e428412d26a9bb735672d4d08e63b",
-    "role": "user"
+    "role": "admin"
   },
   {
     "firstName": "author",
@@ -40,5 +40,12 @@
     "username": "MaxRodler",
     "password": "9baf3a40312f39849f46dad1040f2f039f1cffa1238c41e9db675315cfad39b6",
     "role": "admin"
+  },
+  {
+    "firstName": "Test",
+    "lastName": "Nutzetr",
+    "username": "1234",
+    "password": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
+    "role": "user"
   }
 ]
