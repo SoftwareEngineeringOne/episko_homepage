@@ -23,6 +23,7 @@
             nodejs
             openssl
             docker-buildx
+            dig
             crun
             typst
             tinymist

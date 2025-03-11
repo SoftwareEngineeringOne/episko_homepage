@@ -10,6 +10,7 @@ import postsRouter from "./routes/posts.js";
 import adminRouter from "./routes/admin.js";
 import userRouter from "./routes/user.js";
 import staticRouter from "./routes/static.js";
+import redirectRouter from "./routes/redirect.js";
 import { errorHandler, notFoundHandler } from "./middleware/errorMiddleware.js";
 import { consoleLogger } from "./middleware/logMiddleware.js";
 import { pugMiddleware } from "./middleware/pugMiddleware.js";
@@ -26,6 +27,8 @@ app.set("views", path.join("src", "views"));
 app.set("view engine", "pug");
 
 app.use(consoleLogger);
+
+app.use("/r", redirectRouter);
 
 /* ---- Environment dependant configuration ---- */
 if (process.env.NODE_ENV == "production") {

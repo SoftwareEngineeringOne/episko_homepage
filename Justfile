@@ -26,7 +26,7 @@ code_8:
     nvim docker-compose.yml
 
 docker:
-    sudo docker-compose up | wl-copy
+    echo "sudo docker-compose up" | wl-copy
 
 snackbar:
     echo 'showSnackbarError("An unexpected error occured")' | wl-copy

@@ -35,8 +35,6 @@ export async function sendFormAsJson(form, modifiers = []) {
   for (const modifier of modifiers) {
     await modifier(data);
   }
-  console.log("Form action:", form.action);
-  console.log("Form method:", form.method);
 
   try {
     const response = await fetch(form.action, {

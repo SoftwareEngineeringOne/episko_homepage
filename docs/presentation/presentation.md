@@ -1,5 +1,12 @@
 # Notizen Präsentation
 
+#### Summe
+- Simon:    5,5min
+- Max:      5,5min 
+- Paul:     4min -->    Ich denke Tendenz bei Beiträge/Posts ist länger,
+                        falls unter 4, Admin Dashboard mit Max teilen
+- Ben:      5min
+
 ## 1. Einleitung
 - Willkommen und so
 ### Ablauf
@@ -15,13 +22,6 @@
 | 6. Beiträge/Posts            | 4min (+)  | *bis 15:00* | Paul  |
 | 7. Admin Dashboard           | 2,5min    | *bis 17:30* | Max   |
 | 8. Deployment                | 2,5min    | *bis 20:00* | Simon |
-
-#### Summe
-- Simon:    5,5min
-- Max:      5,5min 
-- Paul:     4min -->    Ich denke Tendenz bei Beiträge/Posts ist länger,
-                        falls unter 4, Admin Dashboard mit Max teilen
-- Ben:      5min
 
 
 ## 2. Homepage

@@ -3,7 +3,7 @@
     "id": "0312e667-9509-42d3-8502-b0ecf4d6c179",
     "title": "Episko Kickoff",
     "content": "Today we presented our idea of \"Episko\" to our Stakeholders! We shared our respective interests and eventually got the GO for the project. We will now enter the planning phase and see how we can realize our imagination of the Tool. Stay tuned. We will post all relevant milestones here!",
-    "author": "author",
+    "author": "DefinitelyNotSimon13",
     "createdAt": "2024-10-01T14:12:48.025Z",
     "status": "published"
   },
@@ -19,7 +19,7 @@
     "id": "a78bb406-9ec7-451a-8939-83c8dc605ea4",
     "title": "Planning done - Now start doing",
     "content": "Today we finished the last part of the planning phase. This means everything is set up, and we can finally start implementing. For those of you who are interested in this part of the process, feel free to check out our GitHub page (github.com/SoftwareEngineeringOne/episko).",
-    "author": "author",
+    "author": "BenOeckl",
     "createdAt": "2025-01-10T11:02:47.153Z",
     "status": "published"
   },
@@ -27,48 +27,16 @@
     "id": "ecb32776-822d-477b-9a37-050e70e6e5f0",
     "title": "Progress",
     "content": "We are working hard on the last features. If everything goes as planned, we're looking forward to releasing the beta version by the end of the month. See you there. :D",
-    "author": "author",
+    "author": "BenOeckl",
     "createdAt": "2025-03-03T14:35:21.431Z",
     "status": "published"
   },
   {
-    "id": "06fdbf40457ecd292293361055ed7cb69aa50e61dafe7d03",
-    "title": "Test",
-    "content": "test1234",
-    "author": "admin",
-    "createdAt": "2025-03-07T14:16:07.170Z",
-    "status": "published"
-  },
-  {
-    "id": "cbe92ee5858e998367f53ffaeca3a0334950f79f66a99c97",
-    "title": "Ein Test",
-    "content": "12234545trgfg",
-    "author": "admin",
-    "createdAt": "2025-03-10T09:11:52.119Z",
-    "status": "archived"
-  },
-  {
-    "id": "8f6aabbe701ce2635973287faf27544b14cb3075ad127db2",
-    "title": "Authored by an author",
-    "content": "Cool stuff",
-    "author": "author",
-    "createdAt": "2025-03-10T10:28:07.934Z",
-    "status": "published"
-  },
-  {
-    "id": "dba42b0aa6c41dcc724592d77fd26d2ee56053d5a6663047",
-    "title": "Lorem Ipsum",
-    "content": "Lorem Ipsum",
-    "author": "author",
-    "createdAt": "2025-03-10T17:23:24.533Z",
-    "status": "archived"
-  },
-  {
-    "id": "2fe4466b7c1c3b28b6f3dd0189bf8282b8bf1326b5d4335f",
-    "title": "Lorem Ipsum 2",
-    "content": "Lorem Ipsum 2",
-    "author": "author",
-    "createdAt": "2025-03-10T17:58:22.362Z",
+    "id": "aa58677a4672ab137c3ad99ce537fb2af4a0ece65bbc23ff",
+    "title": "Outdated Post",
+    "content": "\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed augue nisi. Ut in eros et mauris elementum suscipit. Vivamus vel accumsan velit. Duis nunc massa, viverra eu pulvinar sagittis, viverra vel eros. Morbi pretium orci ex, in volutpat lectus accumsan at. Etiam lobortis ultricies purus. Curabitur ut sollicitudin elit, nec consectetur enim. Ut dignissim felis id augue aliquet, ut sodales tellus pulvinar. Sed luctus iaculis augue non elementum. Vivamus tempor velit ipsum. Nullam tristique vel est in convallis. Phasellus eleifend convallis ullamcorper.\n\nAliquam erat volutpat. Proin non convallis ex. Sed ac tempus sem. Donec vel lacus eget lacus pulvinar ullamcorper sed eget nibh. Maecenas et justo magna. Quisque dignissim at enim et hendrerit. Morbi tempor nisl quis neque tempus eleifend. Pellentesque ullamcorper, tortor sed fermentum consequat, felis tortor consequat ipsum, non dictum mi erat interdum dolor. Aliquam nisi lectus, volutpat nec quam eget, dignissim fermentum leo. Aliquam vitae mi ipsum. Pellentesque eget lacus sagittis, lobortis augue malesuada, scelerisque erat. Curabitur efficitur velit felis, eu tristique ante sodales vel.\n\nPellentesque dapibus condimentum sapien, id sollicitudin ipsum ultricies id. Phasellus fermentum a mauris nec cursus. Nunc massa lacus, pretium ut enim at, tincidunt gravida massa. Donec mi urna, pulvinar in placerat et, pellentesque vitae felis. Aenean malesuada porta purus at cursus. Etiam mattis ullamcorper ultrices. Morbi vitae felis ac urna tempor eleifend. Sed lobortis, metus in ullamcorper varius, tellus leo bibendum enim, ut convallis est dui eget lectus. Donec est magna, venenatis in malesuada in, molestie eu tortor. Sed eu tellus nec arcu cursus cursus. Integer condimentum, ex ut ullamcorper mattis, arcu eros tempor dolor, id laoreet eros nibh id erat. Nulla luctus magna commodo vehicula dapibus. Sed aliquet eleifend mattis. Mauris pharetra sapien orci, malesuada sodales mi dictum non.\n\nQuisque at convallis libero, eleifend semper augue. Etiam odio eros, semper eu suscipit a, eleifend vitae sem. Aliquam in turpis id lectus pellentesque faucibus quis a magna. In sed condimentum velit, in facilisis risus. Pellentesque velit magna, ornare in libero nec, pharetra vulputate neque. Etiam ut sapien augue. Nunc quis nisi et neque blandit auctor. Fusce eleifend lectus at urna hendrerit porttitor. Praesent leo urna, volutpat ut nisl quis, hendrerit pellentesque urna. Quisque iaculis vehicula metus, condimentum tempor eros pellentesque ut. Aenean arcu velit, viverra at odio ut, feugiat suscipit tortor. Morbi turpis mi, molestie sed justo vel, venenatis consequat justo. Quisque nec ipsum gravida, venenatis urna in, posuere nulla.\n\nNam accumsan, mauris et tristique dignissim, lorem eros elementum lorem, sed posuere risus odio quis lacus. Curabitur tempor accumsan vestibulum. Vestibulum sed lorem tempus, venenatis arcu eget, iaculis nulla. Phasellus auctor quis quam id mattis. Praesent mi dolor, venenatis ut magna sit amet, commodo tempor nunc. Nullam a sodales mauris, eleifend euismod justo. Pellentesque augue lacus, fringilla sit amet placerat nec, mollis a quam. Sed id scelerisque lacus. Donec vulputate leo eget odio maximus, sit amet malesuada nisi lacinia. Pellentesque vitae varius velit, sit amet pharetra nibh. Maecenas eu placerat sem, non porttitor purus. Nam finibus egestas tellus non faucibus. Fusce posuere sollicitudin nibh, ullamcorper egestas sem vestibulum a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi eget fringilla purus. Donec tincidunt, diam vitae pulvinar consequat, quam velit pretium velit, ac viverra velit neque eu lorem. ",
+    "author": "BenOeckl",
+    "createdAt": "2025-03-10T21:34:20.200Z",
     "status": "published"
   }
 ]

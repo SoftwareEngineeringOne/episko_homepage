@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  nodejs:
+    image: definitelynotsimon13/webengineering:latest
+    container_name: nodejs
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: "production"
+
+  nginx:
+    image: definitelynotsimon13/nginx:latest
+    container_name: nginx
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - nodejs
